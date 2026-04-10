@@ -2,6 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GestEBEP — Gestion des Élèves à Besoins Éducatifs Particuliers</title>
 <style>
@@ -32,10 +34,10 @@
   *{box-sizing:border-box;margin:0;padding:0;}
 
   body{
-    font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+    font-family:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
     background:var(--bg);color:var(--text);
     min-height:100vh;display:flex;flex-direction:column;
-    font-size:15px;line-height:1.5;
+    font-size:16px;line-height:1.6;
   }
 
   /* ── Header ── */
@@ -130,7 +132,7 @@
   table{width:100%;border-collapse:collapse;}
   th{
     background:var(--surface2);font-family:inherit;
-    font-size:0.78rem;font-weight:600;letter-spacing:.4px;
+    font-size:0.82rem;font-weight:600;letter-spacing:.4px;
     text-transform:uppercase;color:var(--text2);
     padding:11px 16px;text-align:left;border-bottom:1px solid var(--border);
   }
@@ -145,7 +147,7 @@
   /* ── Badges ── */
   .badge{
     display:inline-flex;align-items:center;gap:3px;
-    font-size:0.75rem;font-weight:600;
+    font-size:0.82rem;font-weight:600;
     padding:3px 9px;border-radius:20px;white-space:nowrap;margin:1px;
   }
   .sortable-th{cursor:pointer;user-select:none;white-space:nowrap;}
@@ -213,7 +215,7 @@
   .chip.active-purple{background:rgba(155,124,255,.2);border-color:var(--accent2);color:var(--accent2);}
   #etab-segpa-wrap:has(input:checked){background:rgba(251,146,60,.18);border-color:var(--orange);color:var(--orange);}
 
-  .hint{font-size:0.78rem;color:var(--text3);margin-top:3px;}
+  .hint{font-size:0.82rem;color:var(--text3);margin-top:3px;}
   .warn-msg{font-size:0.82rem;color:var(--orange);margin-top:4px;display:none;}
   .warn-msg.show{display:block;}
 
@@ -250,7 +252,7 @@
   .plan-time-header{height:48px;border-bottom:2px solid var(--border);background:var(--surface2);}
   .plan-time-slot{
     height:40px;border-bottom:1px solid rgba(255,255,255,.04);
-    padding:2px 6px;font-size:0.72rem;color:var(--text3);
+    padding:2px 6px;font-size:0.82rem;color:var(--text3);
     display:flex;align-items:center;white-space:nowrap;box-sizing:border-box;font-weight:500;
   }
   .plan-day-col{flex:0 0 130px;width:130px;border-right:1px solid rgba(255,255,255,.06);position:relative;}
@@ -268,7 +270,7 @@
   .plan-bg-slot:nth-child(odd){background:rgba(255,255,255,.01);}
   .plan-evt{
     position:absolute;left:3px;right:3px;border-radius:5px;
-    padding:5px 7px;font-size:0.78rem;line-height:1.35;
+    padding:5px 7px;font-size:0.82rem;line-height:1.35;
     border-left:4px solid var(--accent);cursor:pointer;
     overflow:hidden;transition:filter .1s;z-index:2;
     box-sizing:border-box;box-shadow:0 1px 4px rgba(0,0,0,.25);
@@ -276,13 +278,13 @@
   .plan-evt:hover{filter:brightness(1.15);z-index:3;}
   .plan-evt.conflict{border-left-color:var(--red) !important;background:rgba(248,113,113,.12) !important;}
   .plan-evt .slot-name{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .plan-evt .slot-info{color:var(--text2);font-size:0.68rem;margin-top:1px;}
+  .plan-evt .slot-info{color:var(--text2);font-size:0.82rem;margin-top:1px;}
   .plan-slot-btns{display:flex;flex-direction:column;gap:2px;align-items:center;justify-content:center;height:100%;padding:2px;opacity:0;transition:opacity .15s;}
   .plan-bg-slot:hover .plan-slot-btns{opacity:1;}
   .plan-cell-add-btn{
     background:rgba(91,156,246,.18);border:1px solid rgba(91,156,246,.4);
     border-radius:4px;padding:3px 6px;cursor:pointer;
-    font-size:0.68rem;color:var(--accent);
+    font-size:0.82rem;color:var(--accent);
     width:92%;text-align:center;font-weight:600;white-space:nowrap;
   }
 
@@ -316,7 +318,7 @@
     .dashboard-grid{grid-template-columns:repeat(2,1fr);}
     nav button{font-size:0.82rem;padding:6px 10px;}
   }
-</style>
+</style></style>
   <!-- Firebase SDK -->
   <script type="module">
     // Firebase sera initialisé après configuration — voir initFirebase()
@@ -327,12 +329,12 @@
 <div id="pial-login-overlay" style="display:none;position:fixed;inset:0;z-index:9999;
   align-items:center;justify-content:center;
   background:linear-gradient(160deg,#1a365d 0%,#2b6cb0 60%,#3182ce 100%);
-  font-family:'Segoe UI',Arial,sans-serif">
+  font-family:'Inter',system-ui,Arial,sans-serif">
 
   <div style="width:100%;max-width:420px;margin:0 20px;animation:fadeUp .4s ease">
     <style>
       @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-      #pial-code-input{width:100%;padding:14px 16px;font-size:1.1rem;font-family:'Segoe UI',Arial,sans-serif;
+      #pial-code-input{width:100%;padding:14px 16px;font-size:1.1rem;font-family:'Inter',system-ui,Arial,sans-serif;
         border:2px solid rgba(255,255,255,.3);border-radius:10px;background:rgba(255,255,255,.12);
         color:#fff;outline:none;letter-spacing:1px;text-transform:uppercase;box-sizing:border-box;
         transition:border-color .2s}
@@ -340,7 +342,7 @@
       #pial-code-input:focus{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.18)}
       #pial-login-btn{width:100%;padding:14px;background:#fff;color:#1a365d;border:none;
         border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;
-        font-family:'Segoe UI',Arial,sans-serif;transition:all .15s;margin-top:10px}
+        font-family:'Inter',system-ui,Arial,sans-serif;transition:all .15s;margin-top:10px}
       #pial-login-btn:hover{background:#e8f0fe;transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
       #pial-login-btn:active{transform:translateY(0)}
       #pial-login-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
@@ -350,19 +352,19 @@
     <div style="text-align:center;margin-bottom:32px">
       <div style="font-size:3rem;margin-bottom:10px">🏫</div>
       <h1 style="color:#fff;font-size:1.6rem;font-weight:800;margin:0;letter-spacing:-.5px">GestEBEP</h1>
-      <p style="color:rgba(255,255,255,.65);font-size:0.88rem;margin:6px 0 0;font-weight:400">
+      <p style="color:rgba(255,255,255,.9);font-size:1rem;margin:6px 0 0;font-weight:400">
         Gestion des Élèves à Besoins Éducatifs Particuliers
       </p>
     </div>
 
     <!-- Carte de connexion -->
-    <div style="background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.2);
+    <div style="background:rgba(255,255,255,.13);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.25);
       border-radius:16px;padding:28px">
 
-      <div style="color:rgba(255,255,255,.9);font-size:0.85rem;font-weight:600;margin-bottom:6px;text-align:center">
+      <div style="color:#fff;font-size:1rem;font-weight:700;margin-bottom:6px;text-align:center">
         Code de votre PIAL / PAS
       </div>
-      <div style="color:rgba(255,255,255,.5);font-size:0.76rem;text-align:center;margin-bottom:16px">
+      <div style="color:rgba(255,255,255,.8);font-size:0.88rem;text-align:center;margin-bottom:16px">
         Partagez le même code avec vos collègues pour travailler ensemble
       </div>
 
@@ -385,7 +387,7 @@
     </div>
 
     <!-- Note explicative -->
-    <div style="text-align:center;margin-top:18px;color:rgba(255,255,255,.4);font-size:0.74rem;line-height:1.6">
+    <div style="text-align:center;margin-top:18px;color:rgba(255,255,255,.75);font-size:0.85rem;line-height:1.7">
       Chaque PIAL a son propre espace de données isolé.<br>
       Pas de compte requis — juste un code à mémoriser.
     </div>
@@ -397,8 +399,8 @@
 
 <header>
   <div class="logo" id="logo-div" style="display:flex;flex-direction:column;gap:1px;cursor:pointer" onclick="openConfigModal()" title="Paramètres">
-    <span id="logo-pial-name" style="font-size:0.95rem;font-weight:700;color:var(--text);font-family:'Inter',Arial,sans-serif;letter-spacing:0;line-height:1.2">— cliquer pour configurer</span>
-    <span id="logo-subtitle" style="font-size:0.68rem;font-weight:400;color:var(--text3);font-family:'Source Sans 3',Arial,sans-serif;letter-spacing:.3px;line-height:1.2">Gestion des EBEP</span>
+    <span id="logo-pial-name" style="font-size:0.95rem;font-weight:700;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;letter-spacing:0;line-height:1.2">— cliquer pour configurer</span>
+    <span id="logo-subtitle" style="font-size:0.82rem;font-weight:400;color:var(--text3);font-family:'Inter',system-ui,Arial,sans-serif;letter-spacing:.3px;line-height:1.2">Gestion des EBEP</span>
   </div>
   <nav>
     <button class="active" onclick="showSection('dashboard',this)">🏠 Tableau de bord</button>
@@ -415,10 +417,10 @@
     <div class="hstat"><strong id="hstat-aesh">0</strong>AESH</div>
     <div class="hstat"><strong id="hstat-eleves">0</strong>Élèves</div>
     <div style="display:flex;gap:6px;margin-left:8px;border-left:1px solid var(--border);padding-left:10px">
-      <button class="btn btn-sm" onclick="exportData()" title="Exporter toutes les données en JSON" style="font-size:0.75rem;padding:5px 10px">⬇ Export</button>
-      <button class="btn btn-sm" onclick="showFirebaseKeys()" title="Partager les clés Firebase avec un collègue" style="font-size:0.75rem;padding:5px 10px;color:var(--accent);border-color:var(--accent)">🔑 Partager</button>
-      <label class="btn btn-sm" title="Importer des données depuis un fichier JSON" style="font-size:0.75rem;padding:5px 10px;cursor:pointer">⬆ Import<input type="file" accept=".json" onchange="importData(event)" style="display:none"></label>
-      <button class="btn btn-sm" onclick="resetToSeedData()" title="Réinitialiser avec les données de démonstration" style="font-size:0.75rem;padding:5px 10px;color:var(--orange);border-color:var(--orange)">🔄 Reset démo</button>
+      <button class="btn btn-sm" onclick="exportData()" title="Exporter toutes les données en JSON" style="font-size:0.85rem;padding:5px 10px">⬇ Export</button>
+      <button class="btn btn-sm" onclick="showFirebaseKeys()" title="Partager les clés Firebase avec un collègue" style="font-size:0.85rem;padding:5px 10px;color:var(--accent);border-color:var(--accent)">🔑 Partager</button>
+      <label class="btn btn-sm" title="Importer des données depuis un fichier JSON" style="font-size:0.85rem;padding:5px 10px;cursor:pointer">⬆ Import<input type="file" accept=".json" onchange="importData(event)" style="display:none"></label>
+      <button class="btn btn-sm" onclick="resetToSeedData()" title="Réinitialiser avec les données de démonstration" style="font-size:0.85rem;padding:5px 10px;color:var(--orange);border-color:var(--orange)">🔄 Reset démo</button>
     </div>
   </div>
 </header>
@@ -433,10 +435,10 @@
   <!-- PIAL info bar -->
   <div id="dash-pial-bar" style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:20px">
     <div>
-      <div id="dash-pial-nom" style="font-family:'Inter',Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--text)"></div>
-      <div id="dash-pial-ref" style="font-size:0.78rem;color:var(--text3);margin-top:1px"></div>
+      <div id="dash-pial-nom" style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:1rem;font-weight:700;color:var(--text)"></div>
+      <div id="dash-pial-ref" style="font-size:0.85rem;color:var(--text3);margin-top:1px"></div>
     </div>
-    <button class="btn btn-sm" onclick="openConfigModal()" style="font-size:0.78rem" id="btn-params-title" title="Paramètres">⚙️ Paramètres</button>
+    <button class="btn btn-sm" onclick="openConfigModal()" style="font-size:0.85rem" id="btn-params-title" title="Paramètres">⚙️ Paramètres</button>
   </div>
   <div class="page-title">Tableau de bord</div>
   <div class="page-sub">Vue d'ensemble – <span id="today-date"></span></div>
@@ -449,11 +451,11 @@
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
     <div>
-      <div style="font-family:'Inter',Arial,sans-serif;font-weight:600;font-size:0.9rem;margin-bottom:12px;">AESH absentes aujourd'hui</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-weight:600;font-size:0.9rem;margin-bottom:12px;">AESH absentes aujourd'hui</div>
       <div id="dash-aesh-absentes-list" class="table-wrap"><table><thead><tr><th>AESH</th><th>Motif</th><th>Élèves concernés</th></tr></thead><tbody id="dash-aesh-table"><tr class="empty-row"><td colspan="3">Aucune absence aujourd'hui</td></tr></tbody></table></div>
     </div>
     <div>
-      <div style="font-family:'Inter',Arial,sans-serif;font-weight:600;font-size:0.9rem;margin-bottom:12px;">Alertes récentes</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-weight:600;font-size:0.9rem;margin-bottom:12px;">Alertes récentes</div>
       <div id="dash-alertes-list" class="alerts-list"><div style="color:var(--text3);font-size:0.85rem;padding:20px;text-align:center;">Aucune alerte</div></div>
     </div>
   </div>
@@ -561,21 +563,21 @@
 
   <!-- Sélecteur de semaine commun à toutes les vues -->
   <div style="display:flex;align-items:center;gap:8px;padding:8px 14px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:12px;flex-wrap:wrap">
-    <span style="font-size:0.78rem;font-weight:600;color:var(--text2)">📅</span>
+    <span style="font-size:0.85rem;font-weight:600;color:var(--text2)">📅</span>
     <button class="btn btn-sm" onclick="planWeekNav(-1)" title="Semaine précédente" style="padding:5px 10px;font-size:0.85rem">◀</button>
     <input type="week" id="plan-week-input" onchange="planWeekChanged()"
-      style="background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;outline:none;min-width:150px;cursor:pointer">
+      style="background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;outline:none;min-width:150px;cursor:pointer">
     <button class="btn btn-sm" onclick="planWeekNav(1)" title="Semaine suivante" style="padding:5px 10px;font-size:0.85rem">▶</button>
     <button class="btn btn-sm" onclick="planWeekToday()" style="border-color:var(--accent);color:var(--accent)">Semaine actuelle</button>
     <span id="plan-week-label" style="font-size:0.82rem;color:var(--text);font-weight:500;margin-left:4px"></span>
   </div>
   <!-- Vue tabs -->
   <div style="display:flex;gap:0;margin-bottom:16px;border-bottom:1px solid var(--border);overflow-x:auto">
-    <button class="tab-plan" id="tab-by-aesh"   onclick="switchPlanView('aesh',this)"   style="background:none;border:none;border-bottom:2px solid var(--accent);color:var(--accent);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">👤 AESH</button>
-    <button class="tab-plan" id="tab-by-eleve"  onclick="switchPlanView('eleve',this)"  style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">🎒 Élève</button>
-    <button class="tab-plan" id="tab-by-classe" onclick="switchPlanView('classe',this)" style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">📚 Classe</button>
-    <button class="tab-plan" id="tab-by-etab"   onclick="switchPlanView('etab',this)"   style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">🏫 Établissement</button>
-    <button class="tab-plan" id="tab-quotas"    onclick="switchPlanView('quotas',this)" style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">📊 Quotas</button>
+    <button class="tab-plan" id="tab-by-aesh"   onclick="switchPlanView('aesh',this)"   style="background:none;border:none;border-bottom:2px solid var(--accent);color:var(--accent);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">👤 AESH</button>
+    <button class="tab-plan" id="tab-by-eleve"  onclick="switchPlanView('eleve',this)"  style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">🎒 Élève</button>
+    <button class="tab-plan" id="tab-by-classe" onclick="switchPlanView('classe',this)" style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">📚 Classe</button>
+    <button class="tab-plan" id="tab-by-etab"   onclick="switchPlanView('etab',this)"   style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">🏫 Établissement</button>
+    <button class="tab-plan" id="tab-quotas"    onclick="switchPlanView('quotas',this)" style="background:none;border:none;border-bottom:2px solid transparent;color:var(--text2);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500;padding:9px 16px;cursor:pointer;margin-bottom:-1px;white-space:nowrap">📊 Quotas</button>
   </div>
 
   <!-- Vue AESH -->
@@ -636,8 +638,8 @@
     <div class="toolbar">
       <select class="filter-sel" id="plan-etab-quota" onchange="renderQuotas()"><option value="">Tous les établissements</option></select>
       <div style="display:flex;gap:0;border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden">
-        <button id="quota-tab-eleves" onclick="setQuotaTab('eleves')" style="background:var(--accent);color:#fff;border:none;padding:7px 16px;cursor:pointer;font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500">🎒 Élèves</button>
-        <button id="quota-tab-aesh" onclick="setQuotaTab('aesh')" style="background:var(--surface2);color:var(--text2);border:none;padding:7px 16px;cursor:pointer;font-family:'Source Sans 3',Arial,sans-serif;font-size:0.82rem;font-weight:500">👤 AESH</button>
+        <button id="quota-tab-eleves" onclick="setQuotaTab('eleves')" style="background:var(--accent);color:#fff;border:none;padding:7px 16px;cursor:pointer;font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500">🎒 Élèves</button>
+        <button id="quota-tab-aesh" onclick="setQuotaTab('aesh')" style="background:var(--surface2);color:var(--text2);border:none;padding:7px 16px;cursor:pointer;font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:500">👤 AESH</button>
       </div>
       <select class="filter-sel" id="quota-sort" onchange="renderQuotas()" style="min-width:130px">
         <option value="nom">Tri : Nom A→Z</option>
@@ -678,7 +680,7 @@
 
     <!-- Panneau gauche : sélection + filtres -->
     <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;position:sticky;top:16px">
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Requête</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Requête</div>
       <select class="filter-sel" id="req-type" onchange="onReqTypeChange()" style="width:100%;margin-bottom:14px">
         <option value="">Choisir…</option>
         <optgroup label="Élèves">
@@ -711,17 +713,17 @@
 
       <!-- Filtres -->
       <div id="req-filters-panel" style="display:none">
-        <div style="font-family:'Inter',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Filtres</div>
+        <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Filtres</div>
 
         <!-- Multi-étab selector -->
         <div id="req-etab-filter-block" style="display:none;margin-bottom:10px">
-          <label style="font-size:0.78rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Établissements</label>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Établissements</label>
           <div id="req-etab-checkboxes" style="max-height:130px;overflow-y:auto;display:flex;flex-direction:column;gap:3px;padding:6px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm)"></div>
         </div>
 
         <!-- Type étab filter -->
         <div id="req-type-etab-block" style="display:none;margin-bottom:10px">
-          <label style="font-size:0.78rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Type d'établissement</label>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Type d'établissement</label>
           <div style="display:flex;gap:6px;flex-wrap:wrap">
             <label style="font-size:0.8rem;color:var(--text2);display:flex;align-items:center;gap:4px"><input type="checkbox" id="req-te-ecole" checked onchange="onReqTypeEtabChange()"> École</label>
             <label style="font-size:0.8rem;color:var(--text2);display:flex;align-items:center;gap:4px"><input type="checkbox" id="req-te-college" checked onchange="onReqTypeEtabChange()"> Collège</label>
@@ -731,7 +733,7 @@
 
         <!-- Notif filter -->
         <div id="req-notif-filter-block" style="display:none;margin-bottom:10px">
-          <label style="font-size:0.78rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Type de notification</label>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--text2);display:block;margin-bottom:5px">Type de notification</label>
           <select class="filter-sel" id="req-filter-notif" onchange="renderRequete()" style="width:100%">
             <option value="">Tous</option>
             <option value="ind">Individuelle</option>
@@ -742,10 +744,10 @@
 
         <!-- Multi-tri -->
         <div id="req-sort-block" style="margin-bottom:10px">
-          <label style="font-size:0.78rem;font-weight:600;color:var(--text2);display:block;margin-bottom:6px">Tri (jusqu'à 3 critères)</label>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--text2);display:block;margin-bottom:6px">Tri (jusqu'à 3 critères)</label>
           <div style="display:flex;flex-direction:column;gap:5px" id="req-sort-rows">
             <div style="display:flex;gap:4px;align-items:center">
-              <span style="font-size:0.72rem;color:var(--text3);min-width:16px;text-align:right">1.</span>
+              <span style="font-size:0.82rem;color:var(--text3);min-width:16px;text-align:right">1.</span>
               <select class="filter-sel" id="req-sort-1" onchange="onReqSortChange()" style="flex:1;font-size:0.8rem;min-width:0">
                 <option value="">— Aucun —</option>
                 <option value="nom">Nom</option>
@@ -761,7 +763,7 @@
               </select>
             </div>
             <div style="display:flex;gap:4px;align-items:center">
-              <span style="font-size:0.72rem;color:var(--text3);min-width:16px;text-align:right">2.</span>
+              <span style="font-size:0.82rem;color:var(--text3);min-width:16px;text-align:right">2.</span>
               <select class="filter-sel" id="req-sort-2" onchange="onReqSortChange()" style="flex:1;font-size:0.8rem;min-width:0">
                 <option value="">— Aucun —</option>
                 <option value="nom">Nom</option>
@@ -777,7 +779,7 @@
               </select>
             </div>
             <div style="display:flex;gap:4px;align-items:center">
-              <span style="font-size:0.72rem;color:var(--text3);min-width:16px;text-align:right">3.</span>
+              <span style="font-size:0.82rem;color:var(--text3);min-width:16px;text-align:right">3.</span>
               <select class="filter-sel" id="req-sort-3" onchange="onReqSortChange()" style="flex:1;font-size:0.8rem;min-width:0">
                 <option value="">— Aucun —</option>
                 <option value="nom">Nom</option>
@@ -793,23 +795,23 @@
               </select>
             </div>
             <!-- Résumé tri actif -->
-            <div id="req-sort-summary" style="display:none;font-size:0.72rem;color:var(--accent);padding:4px 6px;background:rgba(79,142,247,.08);border-radius:var(--radius-sm);border:1px solid rgba(79,142,247,.2);margin-top:2px"></div>
+            <div id="req-sort-summary" style="display:none;font-size:0.82rem;color:var(--accent);padding:4px 6px;background:rgba(79,142,247,.08);border-radius:var(--radius-sm);border:1px solid rgba(79,142,247,.2);margin-top:2px"></div>
           </div>
         </div>
 
         <!-- Filtres croisés — visible uniquement pour eleves-croise -->
         <div id="req-croise-block" style="display:none;margin-bottom:10px">
-          <div style="font-family:'Inter',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Filtres croisés — Cocher = inclure, cocher en rouge = exclure</div>
+          <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:10px">Filtres croisés — Cocher = inclure, cocher en rouge = exclure</div>
 
           <!-- Notifications -->
           <div style="margin-bottom:10px">
-            <div style="font-size:0.72rem;font-weight:600;color:var(--text2);margin-bottom:5px">Notification MDPH</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text2);margin-bottom:5px">Notification MDPH</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
-              <label class="croise-tag" style="background:rgba(79,142,247,.12);border-color:rgba(79,142,247,.3)"><input type="checkbox" data-croise-notif="ind" onchange="renderRequete()"><span class="badge badge-blue" style="font-size:0.65rem">IND</span> Individuelle</label>
+              <label class="croise-tag" style="background:rgba(79,142,247,.12);border-color:rgba(79,142,247,.3)"><input type="checkbox" data-croise-notif="ind" onchange="renderRequete()"><span class="badge badge-blue" style="font-size:0.82rem">IND</span> Individuelle</label>
               <label class="croise-tag-excl" style="background:rgba(240,74,92,.05);border-color:rgba(240,74,92,.2)"><input type="checkbox" data-croise-notif-excl="ind" onchange="renderRequete()"><span style="color:var(--red);font-size:0.7rem">✕</span> sans IND</label>
-              <label class="croise-tag" style="background:rgba(124,92,252,.12);border-color:rgba(124,92,252,.3)"><input type="checkbox" data-croise-notif="mut" onchange="renderRequete()"><span class="badge badge-purple" style="font-size:0.65rem">MUT</span> Mutualisée</label>
+              <label class="croise-tag" style="background:rgba(124,92,252,.12);border-color:rgba(124,92,252,.3)"><input type="checkbox" data-croise-notif="mut" onchange="renderRequete()"><span class="badge badge-purple" style="font-size:0.82rem">MUT</span> Mutualisée</label>
               <label class="croise-tag-excl" style="background:rgba(240,74,92,.05);border-color:rgba(240,74,92,.2)"><input type="checkbox" data-croise-notif-excl="mut" onchange="renderRequete()"><span style="color:var(--red);font-size:0.7rem">✕</span> sans MUT</label>
-              <label class="croise-tag" style="background:rgba(245,200,66,.12);border-color:rgba(245,200,66,.3)"><input type="checkbox" data-croise-notif="ulis" onchange="renderRequete()"><span class="badge badge-yellow" style="font-size:0.65rem">ULIS</span> ULIS</label>
+              <label class="croise-tag" style="background:rgba(245,200,66,.12);border-color:rgba(245,200,66,.3)"><input type="checkbox" data-croise-notif="ulis" onchange="renderRequete()"><span class="badge badge-yellow" style="font-size:0.82rem">ULIS</span> ULIS</label>
               <label class="croise-tag-excl" style="background:rgba(240,74,92,.05);border-color:rgba(240,74,92,.2)"><input type="checkbox" data-croise-notif-excl="ulis" onchange="renderRequete()"><span style="color:var(--red);font-size:0.7rem">✕</span> sans ULIS</label>
               <label class="croise-tag" style="background:rgba(217,119,6,.1);border-color:rgba(217,119,6,.3)"><input type="checkbox" data-croise-notif="attente" onchange="renderRequete()"><span style="font-size:0.7rem">⏳</span> En attente</label>
               <label class="croise-tag" style="background:rgba(124,92,252,.08);border-color:rgba(124,92,252,.2)"><input type="checkbox" data-croise-notif="aucune" onchange="renderRequete()"><span style="font-size:0.7rem">—</span> Aucune notif</label>
@@ -818,7 +820,7 @@
 
           <!-- Plans -->
           <div style="margin-bottom:10px">
-            <div style="font-size:0.72rem;font-weight:600;color:var(--text2);margin-bottom:5px">Plans d'accompagnement</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text2);margin-bottom:5px">Plans d'accompagnement</div>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px">
               <label class="croise-tag"><input type="checkbox" data-croise-plan="ppre" onchange="renderRequete()"> PPRE</label>
               <label class="croise-tag-excl"><input type="checkbox" data-croise-plan-excl="ppre" onchange="renderRequete()"><span style="color:var(--red);font-size:0.7rem">✕</span> sans PPRE</label>
@@ -833,7 +835,7 @@
 
           <!-- Situation -->
           <div>
-            <div style="font-size:0.72rem;font-weight:600;color:var(--text2);margin-bottom:5px">Situation AESH</div>
+            <div style="font-size:0.82rem;font-weight:600;color:var(--text2);margin-bottom:5px">Situation AESH</div>
             <div style="display:flex;flex-direction:column;gap:3px">
               <label class="croise-tag"><input type="checkbox" data-croise-etat="avec_soins" onchange="renderRequete()"> 🏥 Avec soins extérieurs</label>
               <label class="croise-tag"><input type="checkbox" data-croise-etat="avec_accomp" onchange="renderRequete()"> ✅ Avec accompagnement planifié</label>
@@ -847,7 +849,7 @@
 
         <!-- Column selector drag-and-drop -->
         <div id="req-cols-block" style="display:none">
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:6px">Colonnes — cocher et ordonner</div>
+          <div style="font-size:0.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:6px">Colonnes — cocher et ordonner</div>
           <div style="font-size:0.7rem;color:var(--text3);margin-bottom:6px">☰ glisser pour réordonner</div>
           <div id="req-cols-checkboxes" style="display:flex;flex-direction:column;gap:3px"></div>
         </div>
@@ -855,13 +857,13 @@
 
       <!-- Zone personnalisée -->
       <div id="req-custom-block" style="display:none;margin-top:10px">
-        <div style="font-family:'Inter',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Entité</div>
+        <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:8px">Entité</div>
         <select class="filter-sel" id="req-custom-entity" onchange="buildCustomFields();renderRequete()" style="width:100%;margin-bottom:10px">
           <option value="eleves">Élèves</option>
           <option value="aesh">AESH</option>
           <option value="etab">Établissements</option>
         </select>
-        <div style="font-family:'Inter',Arial,sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:6px">Champs</div>
+        <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--text3);margin-bottom:6px">Champs</div>
         <div id="req-custom-fields" style="display:flex;flex-direction:column;gap:4px"></div>
       </div>
 
@@ -962,13 +964,13 @@
     <div class="modal-body">
       <div class="form-row full">
         <div class="form-group">
-          <label>Nom de la classe * <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(unique dans l'établissement)</span></label>
+          <label>Nom de la classe * <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(unique dans l'établissement)</span></label>
           <input id="classe-nom" placeholder="Ex: 6ème A, CM2-B, ULIS1, SEGPA-3ème…" oninput="checkClasseNom()" />
           <div class="warn-msg" id="classe-nom-warn">⚠️ Ce nom existe déjà dans cet établissement.</div>
         </div>
       </div>
       <div class="form-group" style="margin-bottom:14px">
-        <label>Niveaux d'enseignement * <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(plusieurs possibles)</span></label>
+        <label>Niveaux d'enseignement * <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(plusieurs possibles)</span></label>
         <div class="chips-grid" id="classe-niveaux-chips"></div>
         <div class="warn-msg" id="classe-niveaux-warn">⚠️ Sélectionnez au moins un niveau.</div>
       </div>
@@ -1012,13 +1014,13 @@
       <!-- Heures -->
       <div class="form-row full">
         <div class="form-group">
-          <label>Heures hebdomadaires <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(contrat — 24h par défaut)</span></label>
+          <label>Heures hebdomadaires <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(contrat — 24h par défaut)</span></label>
           <input id="aesh-heures" type="number" value="24" min="1" max="35" style="max-width:120px" />
         </div>
       </div>
 
       <!-- Affectations -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Affectations</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Affectations</div>
       <div class="form-row">
         <div class="form-group">
           <label>Établissement principal</label>
@@ -1034,18 +1036,18 @@
       </div>
 
       <!-- Temps partiel -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Temps partiel – créneaux hebdomadaires non travaillés</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Temps partiel – créneaux hebdomadaires non travaillés</div>
       <div class="hint" style="margin-bottom:10px">Demi-journées ou journées systématiquement non travaillées (temps partiel structurel).</div>
       <div id="aesh-tp-list" style="display:flex;flex-direction:column;gap:6px;margin-bottom:8px"></div>
       <button class="btn btn-sm" type="button" onclick="addTpRow()">➕ Ajouter un créneau récurrent</button>
 
       <!-- Absences ponctuelles -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Absences ponctuelles</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Absences ponctuelles</div>
       <div id="aesh-absences-list" style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px"></div>
       <button class="btn btn-sm" type="button" onclick="addAbsenceRow()">➕ Ajouter une période</button>
 
       <!-- Préconisations médicales -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Préconisations médicales</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Préconisations médicales</div>
       <div style="padding:10px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);">
         <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.85rem;color:var(--text2);margin-bottom:10px">
           <input type="checkbox" id="aesh-has-preco" style="width:auto" onchange="onPrecoChange()"> Préconisations médicales déclarées
@@ -1101,7 +1103,7 @@
       </div>
 
       <!-- Scolarisation -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Scolarisation</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Scolarisation</div>
       <div class="form-row">
         <div class="form-group">
           <label>Établissement *</label>
@@ -1114,21 +1116,21 @@
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label>Niveau scolaire <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(doit correspondre à la classe)</span></label>
+          <label>Niveau scolaire <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(doit correspondre à la classe)</span></label>
           <select id="eleve-niveau" onchange="checkNiveauCoherence()">
             <option value="">— Non renseigné —</option>
           </select>
           <div class="warn-msg" id="eleve-niveau-warn">⚠️ Ce niveau ne correspond pas aux niveaux de la classe sélectionnée.</div>
         </div>
         <div class="form-group">
-          <label>Temps de présence hebdomadaire <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(h à l'école)</span></label>
+          <label>Temps de présence hebdomadaire <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(h à l'école)</span></label>
           <input id="eleve-temps-presence" type="number" min="1" max="30" placeholder="ex: 20" />
         </div>
       </div>
       <!-- Double affectation ULIS -->
       <div class="form-row full" id="eleve-ulis-row" style="display:none">
         <div class="form-group">
-          <label>Dispositif ULIS <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(double affectation possible)</span></label>
+          <label>Dispositif ULIS <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(double affectation possible)</span></label>
           <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.85rem;color:var(--text2);">
             <input type="checkbox" id="eleve-in-ulis" style="width:auto" onchange="onUlisInChange()"> Élève inclus dans le dispositif ULIS de cet établissement
           </label>
@@ -1136,26 +1138,26 @@
       </div>
 
       <!-- Notifications & accompagnement — blocs couleur -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Accompagnement &amp; notifications</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Accompagnement &amp; notifications</div>
 
       <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
 
         <!-- ── 0. ACCOMPAGNEMENTS EN COURS — fond vert pâle ── -->
         <div style="border:1px solid rgba(46,204,138,.3);border-radius:var(--radius-sm);overflow:hidden">
           <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(46,204,138,.08);cursor:pointer;user-select:none" onclick="toggleAccompBlock()">
-            <span style="font-family:'Inter',Arial,sans-serif;font-size:0.8rem;font-weight:600;color:var(--green)">Accompagnements en cours <span id="accomp-count-badge" style="font-size:0.72rem;color:var(--text3)"></span></span>
+            <span style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.8rem;font-weight:600;color:var(--green)">Accompagnements en cours <span id="accomp-count-badge" style="font-size:0.82rem;color:var(--text3)"></span></span>
             <span id="accomp-toggle-icon" style="font-size:0.85rem;color:var(--green)">▶</span>
           </div>
           <div id="accomp-block" style="display:none;padding:10px 12px;background:rgba(46,204,138,.04);border-top:1px solid rgba(46,204,138,.2)">
-            <div style="font-size:0.75rem;color:var(--text3);margin-bottom:8px">Cochez les accompagnements extérieurs actifs.</div>
+            <div style="font-size:0.85rem;color:var(--text3);margin-bottom:8px">Cochez les accompagnements extérieurs actifs.</div>
             <div style="display:flex;flex-direction:column;gap:5px" id="accomp-items-list">
-              <div class="accomp-item" data-key="rased"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>📚 RASED</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'intervention (aide E/G), fréquence, maître référent…"></textarea></div>
-              <div class="accomp-item" data-key="cmpp"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🧠 CMPP</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Spécialistes, fréquence, coordonnées CMPP…"></textarea></div>
-              <div class="accomp-item" data-key="cmpea"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>💊 CMPEA</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Psychiatre/psychologue, fréquence, traitement…"></textarea></div>
-              <div class="accomp-item" data-key="pco"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🧩 PCO (autisme / TND)</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Plateforme, intervenants, fréquence…"></textarea></div>
-              <div class="accomp-item" data-key="soins_liberaux"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🏥 Soins libéraux</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Orthophoniste, psychomotricien, kiné… jours/horaires…"></textarea></div>
-              <div class="accomp-item" data-key="partenaires_locaux"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🏘 Partenaires locaux</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Associations, dispositifs locaux, réseau de soin…"></textarea></div>
-              <div class="accomp-item" data-key="autre_accomp"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>📌 Autre</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Précisez…"></textarea></div>
+              <div class="accomp-item" data-key="rased"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>📚 RASED</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'intervention (aide E/G), fréquence, maître référent…"></textarea></div>
+              <div class="accomp-item" data-key="cmpp"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🧠 CMPP</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Spécialistes, fréquence, coordonnées CMPP…"></textarea></div>
+              <div class="accomp-item" data-key="cmpea"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>💊 CMPEA</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Psychiatre/psychologue, fréquence, traitement…"></textarea></div>
+              <div class="accomp-item" data-key="pco"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🧩 PCO (autisme / TND)</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Plateforme, intervenants, fréquence…"></textarea></div>
+              <div class="accomp-item" data-key="soins_liberaux"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🏥 Soins libéraux</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Orthophoniste, psychomotricien, kiné… jours/horaires…"></textarea></div>
+              <div class="accomp-item" data-key="partenaires_locaux"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>🏘 Partenaires locaux</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Associations, dispositifs locaux, réseau de soin…"></textarea></div>
+              <div class="accomp-item" data-key="autre_accomp"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(46,204,138,.2);background:rgba(46,204,138,.06)"><input type="checkbox" class="accomp-cb" style="width:auto" onchange="onAccompChange(this)"><span>📌 Autre</span></label><textarea class="accomp-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(46,204,138,.04);border:1px solid rgba(46,204,138,.25);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Précisez…"></textarea></div>
             </div>
           </div>
         </div>
@@ -1163,19 +1165,19 @@
         <!-- ── 1. PROPOSITION PAS 1ER NIVEAU — fond violet pâle, toggle au clic ── -->
         <div id="bloc-pas-eleve" style="display:none;border:1px solid rgba(124,92,252,.3);border-radius:var(--radius-sm);overflow:hidden">
           <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(124,92,252,.1);cursor:pointer;user-select:none" onclick="togglePasBlock()" id="notif-pas-label">
-            <span style="font-family:'Inter',Arial,sans-serif;font-size:0.8rem;font-weight:600;color:var(--accent2)">Proposition PAS 1er niveau <span style="font-weight:400;font-size:0.75rem;color:var(--text3)">— mesures sans orientation MDPH</span></span>
+            <span style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.8rem;font-weight:600;color:var(--accent2)">Proposition PAS 1er niveau <span style="font-weight:400;font-size:0.85rem;color:var(--text3)">— mesures sans orientation MDPH</span></span>
             <span id="pas-toggle-icon" style="font-size:0.85rem;color:var(--accent2)">▶</span>
           </div>
           <div id="notif-pas-details" style="display:none;padding:10px 12px;background:rgba(124,92,252,.05);border-top:1px solid rgba(124,92,252,.2)">
             <div style="display:flex;flex-direction:column;gap:5px" id="pas-mesures-list">
-              <div class="pas-mesure-block" data-key="amenag_peda"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📝 Aménagements pédagogiques</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'aménagements, matières, modalités…"></textarea></div>
-              <div class="pas-mesure-block" data-key="mpa"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🖥 MPA</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type de matériel, fournisseur…"></textarea></div>
-              <div class="pas-mesure-block" data-key="emas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏥 EMAS</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'intervention, fréquence…"></textarea></div>
-              <div class="pas-mesure-block" data-key="medico_social"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏗 Médico-social</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Structure, type de suivi…"></textarea></div>
-              <div class="pas-mesure-block" data-key="structures_locales"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏘 Structures locales</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="RASED, UPE2A, réseau local…"></textarea></div>
-              <div class="pas-mesure-block" data-key="demande_pas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📋 Demande de PAS</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Démarches engagées, date prévue, interlocuteur…"></textarea></div>
-              <div class="pas-mesure-block" data-key="orientation_mdph"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>➡️ Orientation vers MDPH</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Démarches engagées, interlocuteur MDPH…"></textarea></div>
-              <div class="pas-mesure-block" data-key="autre_pas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📌 Autre</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Précisez…"></textarea></div>
+              <div class="pas-mesure-block" data-key="amenag_peda"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📝 Aménagements pédagogiques</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'aménagements, matières, modalités…"></textarea></div>
+              <div class="pas-mesure-block" data-key="mpa"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🖥 MPA</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type de matériel, fournisseur…"></textarea></div>
+              <div class="pas-mesure-block" data-key="emas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏥 EMAS</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Type d'intervention, fréquence…"></textarea></div>
+              <div class="pas-mesure-block" data-key="medico_social"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏗 Médico-social</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Structure, type de suivi…"></textarea></div>
+              <div class="pas-mesure-block" data-key="structures_locales"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>🏘 Structures locales</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="RASED, UPE2A, réseau local…"></textarea></div>
+              <div class="pas-mesure-block" data-key="demande_pas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📋 Demande de PAS</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Démarches engagées, date prévue, interlocuteur…"></textarea></div>
+              <div class="pas-mesure-block" data-key="orientation_mdph"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>➡️ Orientation vers MDPH</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Démarches engagées, interlocuteur MDPH…"></textarea></div>
+              <div class="pas-mesure-block" data-key="autre_pas"><label style="display:flex;align-items:center;gap:7px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.84rem;color:var(--text2);padding:5px 8px;border-radius:var(--radius-sm);border:1px solid rgba(124,92,252,.2);background:rgba(124,92,252,.06)"><input type="checkbox" class="pas-mesure-cb" style="width:auto" onchange="onPasMesureChange(this)"><span>📌 Autre</span></label><textarea class="pas-mesure-detail" style="display:none;margin-top:3px;width:100%;min-height:40px;background:rgba(124,92,252,.04);border:1px solid rgba(124,92,252,.2);border-radius:var(--radius-sm);padding:6px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.81rem;resize:vertical;outline:none" placeholder="Précisez…"></textarea></div>
             </div>
           </div>
         </div>
@@ -1183,14 +1185,14 @@
         <!-- ── 2. DOSSIER MDPH EN COURS — fond bleu, toggle au clic ── -->
         <div style="border:1px solid rgba(217,119,6,.35);border-radius:var(--radius-sm);overflow:hidden">
           <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(217,119,6,.1);cursor:pointer;user-select:none" onclick="toggleAttenteBlock()" id="notif-attente-label">
-            <span style="font-family:'Inter',Arial,sans-serif;font-size:0.8rem;font-weight:600;color:#d97706">Dossier MDPH en cours <span style="font-weight:400;font-size:0.75rem;color:var(--text3)">— éléments envoyés, décision CDOEA attendue</span></span>
+            <span style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.8rem;font-weight:600;color:#d97706">Dossier MDPH en cours <span style="font-weight:400;font-size:0.85rem;color:var(--text3)">— éléments envoyés, décision CDOEA attendue</span></span>
             <span id="attente-toggle-icon" style="font-size:0.85rem;color:#d97706">▶</span>
           </div>
           <div id="notif-attente-details" style="display:none;padding:10px 12px;background:rgba(217,119,6,.04);border-top:1px solid rgba(217,119,6,.2)">
             <input type="hidden" id="notif-attente-cb" value="1"><!-- valeur gérée par JS via toggleAttenteBlock -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-              <div class="form-group"><label style="font-size:0.72rem">Date dépôt des éléments</label><input id="attente-date-depot" type="date" style="font-size:0.82rem" /></div>
-              <div class="form-group" style="grid-column:1/-1"><label style="font-size:0.72rem">Notes</label><input id="attente-notes" placeholder="Contact CDOEA, observations…" style="font-size:0.82rem" /></div>
+              <div class="form-group"><label style="font-size:0.82rem">Date dépôt des éléments</label><input id="attente-date-depot" type="date" style="font-size:0.82rem" /></div>
+              <div class="form-group" style="grid-column:1/-1"><label style="font-size:0.82rem">Notes</label><input id="attente-notes" placeholder="Contact CDOEA, observations…" style="font-size:0.82rem" /></div>
             </div>
           </div>
         </div>
@@ -1198,33 +1200,33 @@
         <!-- ── 3. NOTIFICATION MDPH — fond orange, déployable ── -->
         <div style="border:1px solid rgba(42,157,143,.35);border-radius:var(--radius-sm);overflow:hidden">
           <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:rgba(42,157,143,.1);cursor:pointer;user-select:none" onclick="toggleMdphBlock()">
-            <span style="font-family:'Inter',Arial,sans-serif;font-size:0.8rem;font-weight:600;color:#2a9d8f">Notification MDPH</span>
+            <span style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.8rem;font-weight:600;color:#2a9d8f">Notification MDPH</span>
             <span id="mdph-toggle-icon" style="font-size:0.85rem;color:#2a9d8f">▶</span>
           </div>
           <div id="mdph-block" style="display:none;padding:10px 12px;background:rgba(42,157,143,.04);border-top:1px solid rgba(42,157,143,.2);flex-direction:column;gap:6px">
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.85rem;color:var(--text2);padding:6px 10px;border-radius:var(--radius-sm);border:1px solid rgba(42,157,143,.2);background:rgba(42,157,143,.06)">
               <input type="checkbox" id="notif-ind" style="width:auto" onchange="onNotifIndChange()">
-              <span><strong>AESH Individuelle</strong> <span style="color:var(--text3);font-size:0.78rem">— durée complète dédiée à l'élève</span></span>
+              <span><strong>AESH Individuelle</strong> <span style="color:var(--text3);font-size:0.85rem">— durée complète dédiée à l'élève</span></span>
             </label>
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.85rem;color:var(--text2);padding:6px 10px;border-radius:var(--radius-sm);border:1px solid rgba(42,157,143,.2);background:rgba(42,157,143,.06)">
               <input type="checkbox" id="notif-mut" style="width:auto" onchange="onNotifMutChange()">
-              <span><strong>AESH Mutualisée</strong> <span style="color:var(--text3);font-size:0.78rem">— temps partagé</span></span>
+              <span><strong>AESH Mutualisée</strong> <span style="color:var(--text3);font-size:0.85rem">— temps partagé</span></span>
             </label>
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.85rem;color:var(--text2);padding:6px 10px;border-radius:var(--radius-sm);border:1px solid rgba(245,200,66,.3);background:rgba(245,200,66,.06)">
               <input type="checkbox" id="notif-ulis" style="width:auto" onchange="onNotifUlisChange()">
-              <span><strong style="color:var(--yellow)">🎯 ULIS</strong> <span style="color:var(--text3);font-size:0.78rem">— cumulable avec Individuelle</span></span>
+              <span><strong style="color:var(--yellow)">🎯 ULIS</strong> <span style="color:var(--text3);font-size:0.85rem">— cumulable avec Individuelle</span></span>
             </label>
             <!-- Accompagnements & soins extérieurs intégrés dans MDPH -->
             <div style="margin-top:6px;border:1px solid rgba(42,157,143,.15);border-radius:var(--radius-sm);overflow:hidden">
               <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 10px;background:rgba(42,157,143,.06);cursor:pointer;user-select:none" onclick="toggleSoinsSection()">
-                <span style="font-size:0.75rem;font-weight:600;color:#2a9d8f;text-transform:uppercase;letter-spacing:.3px">Accompagnements &amp; soins extérieurs</span>
+                <span style="font-size:0.85rem;font-weight:600;color:#2a9d8f;text-transform:uppercase;letter-spacing:.3px">Accompagnements &amp; soins extérieurs</span>
                 <div style="display:flex;align-items:center;gap:6px">
-                  <button type="button" onclick="event.stopPropagation();showSigleHelp()" style="background:var(--surface3);border:1px solid var(--border);border-radius:50%;width:16px;height:16px;cursor:pointer;font-size:0.65rem;color:var(--text2);line-height:14px;padding:0">?</button>
+                  <button type="button" onclick="event.stopPropagation();showSigleHelp()" style="background:var(--surface3);border:1px solid var(--border);border-radius:50%;width:16px;height:16px;cursor:pointer;font-size:0.82rem;color:var(--text2);line-height:14px;padding:0">?</button>
                   <span id="soins-toggle-icon" style="font-size:0.85rem;color:#2a9d8f">▶</span>
                 </div>
               </div>
               <div id="eleve-soins-section" style="display:none;padding:10px;background:rgba(42,157,143,.03)">
-                <div style="font-size:0.75rem;color:var(--text3);margin-bottom:8px">Plusieurs créneaux possibles par type. Les plages apparaîtront dans le planning.</div>
+                <div style="font-size:0.85rem;color:var(--text3);margin-bottom:8px">Plusieurs créneaux possibles par type. Les plages apparaîtront dans le planning.</div>
                 <div id="eleve-soins-chips" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px"></div>
                 <div id="eleve-soins-details" style="display:flex;flex-direction:column;gap:8px"></div>
               </div>
@@ -1232,7 +1234,7 @@
             <!-- Expiration -->
             <div class="form-row full" style="margin-top:6px;margin-bottom:0">
               <div class="form-group">
-                <label style="font-size:0.72rem">📅 Expiration de la notification</label>
+                <label style="font-size:0.82rem">📅 Expiration de la notification</label>
                 <input id="eleve-expiration" type="date" style="font-size:0.85rem" />
               </div>
             </div>
@@ -1244,7 +1246,7 @@
       <!-- Modalité ULIS + IND -->
       <div id="eleve-ulis-ind-block" style="display:none;margin-bottom:12px">
         <div style="padding:10px;background:rgba(245,200,66,.07);border:1px solid rgba(245,200,66,.3);border-radius:var(--radius-sm);">
-          <div style="font-size:0.78rem;font-weight:600;color:var(--yellow);margin-bottom:8px">Modalité d'accompagnement ULIS + Individuel</div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--yellow);margin-bottom:8px">Modalité d'accompagnement ULIS + Individuel</div>
           <div style="display:flex;flex-direction:column;gap:8px">
             <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;letter-spacing:0;font-size:0.83rem;color:var(--text2);">
               <input type="radio" name="ulis-ind-mode" id="ulis-mode-both" value="both" checked style="width:auto" onchange="onUlisIndModeChange()">
@@ -1255,7 +1257,7 @@
               Accompagnement seulement pendant les temps en classe de référence
             </label>
           </div>
-          <div id="ulis-ind-mode-warn" style="display:none;margin-top:8px;padding:6px 10px;background:rgba(240,146,58,.1);border:1px solid var(--orange);border-radius:var(--radius-sm);font-size:0.76rem;color:var(--orange)">
+          <div id="ulis-ind-mode-warn" style="display:none;margin-top:8px;padding:6px 10px;background:rgba(240,146,58,.1);border:1px solid var(--orange);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--orange)">
             ⚠️ Mode "classe de référence uniquement" sélectionné : l'AESH IND ne peut pas accompagner l'élève pendant ses créneaux ULIS. Si des créneaux AESH existent sur des plages ULIS, ils seront signalés comme conflits.
           </div>
         </div>
@@ -1268,7 +1270,7 @@
           <input id="eleve-heures" type="number" value="12" min="1" max="30" placeholder="ex: 12" />
         </div>
         <div class="form-group" id="eleve-heures-eff-display" style="display:none">
-          <label>H effectives <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">= min(notifiées, présence)</span></label>
+          <label>H effectives <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">= min(notifiées, présence)</span></label>
           <div id="eleve-heff-val" style="padding:9px 12px;background:var(--surface3);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--accent)">—</div>
         </div>
       </div>
@@ -1279,7 +1281,7 @@
           <label>Heures hebdomadaires notifiées (AESH mutualisée)</label>
           <div style="display:flex;align-items:center;gap:10px">
             <input id="eleve-heures-mut" type="number" value="6" min="1" max="24" placeholder="6" style="max-width:100px" />
-            <span style="font-size:0.78rem;color:var(--text3)">h/semaine</span>
+            <span style="font-size:0.85rem;color:var(--text3)">h/semaine</span>
           </div>
         </div>
       </div>
@@ -1287,7 +1289,7 @@
       <!-- AESH assignées (individuelle ou mutualisée) -->
       <div id="eleve-aesh-block" style="display:none">
         <div class="form-group" style="margin-bottom:10px">
-          <label>AESH assignée(s) <span style="text-transform:none;font-size:0.72rem;color:var(--text3)" id="aesh-assign-hint">— cochez une ou plusieurs AESH</span></label>
+          <label>AESH assignée(s) <span style="text-transform:none;font-size:0.82rem;color:var(--text3)" id="aesh-assign-hint">— cochez une ou plusieurs AESH</span></label>
           <div id="eleve-aesh-checkboxes" style="display:flex;flex-direction:column;gap:6px;padding:10px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);max-height:200px;overflow-y:auto;">
             <span style="color:var(--text3);font-size:0.8rem">Chargement…</span>
           </div>
@@ -1299,7 +1301,7 @@
 
 
       <!-- Plans / Documents -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Plans &amp; documents</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Plans &amp; documents</div>
       <div class="form-group" style="margin-bottom:12px">
         <label>Plans en vigueur</label>
         <div style="display:flex;gap:12px;flex-wrap:wrap;padding:10px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);">
@@ -1311,9 +1313,9 @@
       </div>
 
       <!-- Notes -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Notes &amp; observations</div>
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Notes &amp; observations</div>
       <div class="form-row full">
-        <div class="form-group"><label>Notes <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(besoins spécifiques, aménagements, observations…)</span></label><textarea id="eleve-notes" placeholder="Ex : difficultés de communication, besoin d'un plan incliné, appareillage auditif, aménagements d'examen…" style="min-height:80px"></textarea></div>
+        <div class="form-group"><label>Notes <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(besoins spécifiques, aménagements, observations…)</span></label><textarea id="eleve-notes" placeholder="Ex : difficultés de communication, besoin d'un plan incliné, appareillage auditif, aménagements d'examen…" style="min-height:80px"></textarea></div>
       </div>
 
 
@@ -1355,12 +1357,12 @@
       <!-- MODE AESH : choisir élève par étab, ou CO ULIS -->
       <div id="creneau-mode-aesh" style="display:none">
         <div style="margin-bottom:8px">
-          <label style="font-size:0.75rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:4px">Établissement</label>
+          <label style="font-size:0.85rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:4px">Établissement</label>
           <select id="creneau-aesh-etab-filter" onchange="onCreneauAeshEtabFilter()" style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;color:var(--text);font-size:0.83rem;width:100%;outline:none">
             <option value="">Tous les établissements</option>
           </select>
         </div>
-        <div style="font-size:0.75rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Élève accompagné *</div>
+        <div style="font-size:0.85rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Élève accompagné *</div>
         <div id="creneau-aesh-eleves-list" style="display:flex;flex-direction:column;gap:4px;padding:8px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);max-height:200px;overflow-y:auto">
           <span style="color:var(--text3);font-size:0.8rem">Sélectionnez un établissement</span>
         </div>
@@ -1368,7 +1370,7 @@
           <div style="height:1px;background:var(--border);margin:8px 0"></div>
           <div style="padding:8px 10px;background:rgba(245,200,66,.08);border:1px solid rgba(245,200,66,.3);border-radius:var(--radius-sm);font-size:0.82rem;color:var(--yellow)">
             🎯 <strong>Présence CO ULIS</strong> — Les plages ULIS se saisissent dans la fiche du dispositif.
-            <div style="margin-top:6px"><button class="btn btn-sm" onclick="closeModal('creneau');openUlisPlanningForAesh(_creneauAeshId)" style="font-size:0.76rem;color:var(--yellow);border-color:rgba(245,200,66,.4);background:rgba(245,200,66,.1)">🎯 Ouvrir la grille ULIS</button></div>
+            <div style="margin-top:6px"><button class="btn btn-sm" onclick="closeModal('creneau');openUlisPlanningForAesh(_creneauAeshId)" style="font-size:0.85rem;color:var(--yellow);border-color:rgba(245,200,66,.4);background:rgba(245,200,66,.1)">🎯 Ouvrir la grille ULIS</button></div>
           </div>
         </div>
       </div>
@@ -1384,11 +1386,11 @@
             class="btn" style="flex:1;justify-content:center">🏥 Soin</button>
         </div>
         <div id="creneau-el-accomp-block">
-          <div style="font-size:0.75rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">AESH *</div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">AESH *</div>
           <select id="creneau-el-aesh-select" onchange="onCreneauElAeshChange()" style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;color:var(--text);font-size:0.83rem;width:100%;outline:none;margin-bottom:6px">
             <option value="">-- Choisir une AESH --</option>
           </select>
-          <div id="creneau-el-tp-warn" style="display:none;padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.76rem;color:var(--red)"></div>
+          <div id="creneau-el-tp-warn" style="display:none;padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--red)"></div>
         </div>
         <div id="creneau-el-ulis-block" style="display:none">
           <div style="padding:10px;background:rgba(245,200,66,.08);border:1px solid rgba(245,200,66,.3);border-radius:var(--radius-sm);font-size:0.82rem;color:var(--yellow)">
@@ -1396,7 +1398,7 @@
           </div>
         </div>
         <div id="creneau-el-soin-block" style="display:none">
-          <div style="font-size:0.75rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Type de soin *</div>
+          <div style="font-size:0.85rem;font-weight:600;color:var(--text3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px">Type de soin *</div>
           <select id="creneau-el-soin-type" style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;color:var(--text);font-size:0.83rem;width:100%;outline:none">
             <option value="">-- Choisir --</option>
           </select>
@@ -1440,14 +1442,14 @@
       </div>
 
       <!-- AESH affectées au dispositif — plusieurs possibles -->
-      <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--border)">
+      <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin:14px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--border)">
         AESH affectées au dispositif ULIS
       </div>
       <div class="hint" style="margin-bottom:10px">Chaque AESH affectée remplit ses 24h sur le dispositif. Définissez ses créneaux de présence ci-dessous.</div>
 
       <!-- Sélection AESH à ajouter -->
       <div style="display:flex;gap:8px;align-items:center;margin-bottom:12px">
-        <select id="ulis-aesh-add-sel" style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.85rem;outline:none">
+        <select id="ulis-aesh-add-sel" style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;outline:none">
           <option value="">— Sélectionner une AESH à affecter —</option>
         </select>
         <button class="btn btn-primary btn-sm" onclick="ulisAddAesh()">➕ Affecter</button>
@@ -1491,7 +1493,7 @@
       <div class="form-row full">
         <div class="form-group">
           <label>Type de soin *</label>
-          <select id="soin-rapide-type" style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.85rem;outline:none">
+          <select id="soin-rapide-type" style="width:100%;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 12px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;outline:none">
             <option value="">— Choisir —</option>
           </select>
         </div>
@@ -1501,7 +1503,7 @@
         <div class="form-group"><label>Heure fin</label><input id="soin-rapide-fin" type="time" /></div>
       </div>
       <div class="form-row full">
-        <div class="form-group"><label>Nom / Structure <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">(facultatif)</span></label><input id="soin-rapide-nom" placeholder="Orthophoniste Mme Dupont…" /></div>
+        <div class="form-group"><label>Nom / Structure <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">(facultatif)</span></label><input id="soin-rapide-nom" placeholder="Orthophoniste Mme Dupont…" /></div>
       </div>
     </div>
     <div class="modal-footer">
@@ -1636,7 +1638,7 @@
       </div>
       <!-- Accompagnement -->
       <div id="evt-accomp-block" style="margin-top:12px">
-        <div style="font-family:'Inter',Arial,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Accompagnement AESH</div>
+        <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--text3);margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid var(--border)">Accompagnement AESH</div>
         <label style="display:flex;align-items:center;gap:8px;cursor:pointer;text-transform:none;font-size:0.85rem;color:var(--text2);margin-bottom:10px">
           <input type="checkbox" id="evt-needs-aesh" style="width:auto" onchange="onEvtNeedsAeshChange()"> Un accompagnement AESH est nécessaire pour cet événement
         </label>
@@ -1671,14 +1673,14 @@
           <label>Type de structure</label>
           <div style="display:flex;gap:10px;margin-top:2px">
             <button type="button" id="config-type-pial-label" onclick="setConfigType('PIAL')"
-              style="flex:1;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Source Sans 3',Arial,sans-serif;font-size:0.88rem;color:var(--text2);padding:8px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2);transition:all .15s;text-align:left">
+              style="flex:1;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.88rem;color:var(--text2);padding:8px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2);transition:all .15s;text-align:left">
               <span id="config-pial-dot" style="width:14px;height:14px;border-radius:50%;border:2px solid var(--border);flex-shrink:0"></span>
-              <span><strong>PIAL</strong> <span style="color:var(--text3);font-size:0.75rem">— Pôle Inclusif d'Accompagnement Localisé</span></span>
+              <span><strong>PIAL</strong> <span style="color:var(--text3);font-size:0.85rem">— Pôle Inclusif d'Accompagnement Localisé</span></span>
             </button>
             <button type="button" id="config-type-pas-label" onclick="setConfigType('PAS')"
-              style="flex:1;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Source Sans 3',Arial,sans-serif;font-size:0.88rem;color:var(--text2);padding:8px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2);transition:all .15s;text-align:left">
+              style="flex:1;display:flex;align-items:center;gap:7px;cursor:pointer;font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.88rem;color:var(--text2);padding:8px 14px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--surface2);transition:all .15s;text-align:left">
               <span id="config-pas-dot" style="width:14px;height:14px;border-radius:50%;border:2px solid var(--border);flex-shrink:0"></span>
-              <span><strong>PAS</strong> <span style="color:var(--text3);font-size:0.75rem">— Pôle d'Accompagnement à la Scolarisation</span></span>
+              <span><strong>PAS</strong> <span style="color:var(--text3);font-size:0.85rem">— Pôle d'Accompagnement à la Scolarisation</span></span>
             </button>
           </div>
           <input type="hidden" id="config-type-value" value="PIAL">
@@ -1686,13 +1688,13 @@
       </div>
       <div class="form-row full">
         <div class="form-group">
-          <label>Nom <span id="config-nom-label-type" style="text-transform:none;font-size:0.72rem;color:var(--text3)">(affiché dans l'en-tête et sur les impressions — facultatif)</span></label>
+          <label>Nom <span id="config-nom-label-type" style="text-transform:none;font-size:0.82rem;color:var(--text3)">(affiché dans l'en-tête et sur les impressions — facultatif)</span></label>
           <input id="config-pial-nom" placeholder="ex : PIAL Maupassant — Paris 12e" />
         </div>
       </div>
       <div class="form-row full">
         <div class="form-group">
-          <label id="config-ref-label">Référent(e)s <span style="text-transform:none;font-size:0.72rem;color:var(--text3)">— un par ligne</span></label>
+          <label id="config-ref-label">Référent(e)s <span style="text-transform:none;font-size:0.82rem;color:var(--text3)">— un par ligne</span></label>
           <textarea id="config-pial-ref" placeholder="Prénom NOM&#10;Prénom NOM" style="min-height:65px;resize:vertical"></textarea>
         </div>
       </div>
@@ -1873,7 +1875,7 @@ function showConnectionStatus(connected, code) {
   if(!el) {
     el = document.createElement('div');
     el.id = 'fb-status';
-    el.style.cssText = 'position:fixed;bottom:12px;right:16px;font-size:0.72rem;padding:4px 12px;border-radius:12px;z-index:500;font-weight:600;cursor:pointer';
+    el.style.cssText = 'position:fixed;bottom:12px;right:16px;font-size:0.82rem;padding:4px 12px;border-radius:12px;z-index:500;font-weight:600;cursor:pointer';
     el.title = 'Cliquer pour changer de PIAL';
     el.onclick = changePialCode;
     document.body.appendChild(el);
@@ -1993,7 +1995,7 @@ function _showSyncBadge() {
   if(!badge) {
     badge = document.createElement('div');
     badge.id = 'sync-badge';
-    badge.style.cssText = 'position:fixed;bottom:44px;right:16px;background:#16a34a;color:#fff;padding:5px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:opacity .5s';
+    badge.style.cssText = 'position:fixed;bottom:44px;right:16px;background:#16a34a;color:#fff;padding:5px 12px;border-radius:20px;font-size:0.85rem;font-weight:600;z-index:999;box-shadow:0 2px 8px rgba(0,0,0,.2);transition:opacity .5s';
     document.body.appendChild(badge);
   }
   badge.textContent = '✓ Sauvegardé';
@@ -2016,7 +2018,7 @@ function showFirebaseKeys() {
     <h3 style="margin:0 0 8px;font-size:1rem;color:#1a365d">🔑 Code PIAL à partager</h3>
     <p style="font-size:0.8rem;color:#64748b;margin-bottom:12px">Partagez ce code avec vos collègues du même PIAL. Ils l'entrent à l'ouverture de GestEBEP.</p>
     <div style="background:#f1f5f9;border-radius:8px;padding:16px;text-align:center;font-size:1.4rem;font-weight:800;letter-spacing:3px;color:#1a365d;margin-bottom:12px">${code}</div>
-    <div style="font-size:0.78rem;color:#64748b;margin-bottom:12px">URL de l'application : <strong>${location.href}</strong></div>
+    <div style="font-size:0.85rem;color:#64748b;margin-bottom:12px">URL de l'application : <strong>${location.href}</strong></div>
     <div style="display:flex;gap:8px">
       <button onclick="navigator.clipboard?.writeText('${code}').then(()=>alert('✅ Code copié !'))"
         style="flex:1;padding:9px;background:#2563eb;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:0.85rem">📋 Copier le code</button>
@@ -2193,7 +2195,7 @@ function showConnectionStatus(connected) {
   if(!el) {
     el = document.createElement('div');
     el.id = 'fb-status';
-    el.style.cssText = 'position:fixed;top:8px;right:16px;font-size:0.72rem;padding:3px 10px;border-radius:12px;z-index:500;font-weight:600';
+    el.style.cssText = 'position:fixed;top:8px;right:16px;font-size:0.82rem;padding:3px 10px;border-radius:12px;z-index:500;font-weight:600';
     document.body.appendChild(el);
   }
   if(connected) {
@@ -2247,7 +2249,7 @@ function updateDashboard() {
       const motif=abs?abs.type:isTp?'Temps partiel':'—';
       const elevesAffectes=store.eleves.filter(el=>(el.aeshIds||[]).includes(a.id));
       const elevesStr=elevesAffectes.length?elevesAffectes.map(e=>e.prenom+' '+e.nom[0]+'.').join(', '):'—';
-      return `<tr><td><strong>${a.prenom} ${a.nom}</strong></td><td><span class="badge badge-orange" style="font-size:0.72rem">${motif}</span></td><td style="font-size:0.78rem;color:var(--text2)">${elevesStr}</td></tr>`;
+      return `<tr><td><strong>${a.prenom} ${a.nom}</strong></td><td><span class="badge badge-orange" style="font-size:0.82rem">${motif}</span></td><td style="font-size:0.85rem;color:var(--text2)">${elevesStr}</td></tr>`;
     }).join('');
   }
 
@@ -2331,7 +2333,7 @@ function renderEtab() {
     const nbSegpa = store.classes.filter(c=>c.etabId==e.id&&c.isSegpa).length;
     const ulisBadge = (e.dispositifs||[]).includes('ULIS') ? '<span class="badge badge-yellow">ULIS</span>' : '';
     const segpaBadge = e.hasSegpa ? '<span class="badge badge-orange">SEGPA</span>' : '';
-    const dispCell = (ulisBadge||segpaBadge) ? ulisBadge+' '+segpaBadge : '<span style="color:var(--text3);font-size:0.78rem">—</span>';
+    const dispCell = (ulisBadge||segpaBadge) ? ulisBadge+' '+segpaBadge : '<span style="color:var(--text3);font-size:0.85rem">—</span>';
     const classesLabel = nbClasses + (nbSegpa ? ` +${nbSegpa} SEGPA` : '');
     return `<tr>
       <td><strong>${e.nom}</strong><br><small style="color:var(--text3)">${e.cp} ${e.ville}</small></td>
@@ -2555,9 +2557,9 @@ function renderClasses() {
     const elevesHtml = elevesUlis.length
       ? elevesUlis.map(el=>{
           const cl=store.classes.find(c=>c.id==el.classeId);
-          return `<span style="display:inline-flex;align-items:center;gap:5px;background:rgba(245,200,66,.12);border:1px solid rgba(245,200,66,.25);border-radius:20px;padding:2px 10px;font-size:0.75rem;color:var(--yellow);margin:2px">${el.prenom} ${el.nom}${cl?` <span style="color:var(--text3)">(${cl.nom})</span>`:''}</span>`;
+          return `<span style="display:inline-flex;align-items:center;gap:5px;background:rgba(245,200,66,.12);border:1px solid rgba(245,200,66,.25);border-radius:20px;padding:2px 10px;font-size:0.85rem;color:var(--yellow);margin:2px">${el.prenom} ${el.nom}${cl?` <span style="color:var(--text3)">(${cl.nom})</span>`:''}</span>`;
         }).join('')
-      : '<span style="color:var(--text3);font-size:0.78rem">Aucun élève affecté au dispositif</span>';
+      : '<span style="color:var(--text3);font-size:0.85rem">Aucun élève affecté au dispositif</span>';
 
     const aeshCoHtml = aeshCoNom
       ? `<strong style="color:var(--text)">${aeshCoNom}</strong>`
@@ -2566,7 +2568,7 @@ function renderClasses() {
     html += `<div style="background:rgba(245,200,66,.07);border:1px solid rgba(245,200,66,.25);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:12px;">
       <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
         <div>
-          <div style="font-weight:600;font-size:0.88rem;color:var(--yellow);margin-bottom:6px">🎯 Dispositif ULIS &nbsp;<span style="font-weight:400;font-size:0.78rem;color:var(--text3)">${elevesUlis.length} élève${elevesUlis.length!==1?'s':''}</span></div>
+          <div style="font-weight:600;font-size:0.88rem;color:var(--yellow);margin-bottom:6px">🎯 Dispositif ULIS &nbsp;<span style="font-weight:400;font-size:0.85rem;color:var(--text3)">${elevesUlis.length} élève${elevesUlis.length!==1?'s':''}</span></div>
           <div style="font-size:0.82rem;color:var(--text2);margin-bottom:3px">Coordinateur : <strong style="color:var(--text)">${ulisInfo?.coordinateur||'<span style=color:var(--red)>Non renseigné</span>'}</strong></div>
           <div style="font-size:0.82rem;color:var(--text2)">AESH affectée au dispositif : ${aeshCoHtml}</div>
         </div>
@@ -2585,8 +2587,8 @@ function renderClasses() {
   if(e?.hasSegpa) {
     html += `<div style="margin-top:4px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <div style="font-size:0.78rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--orange)">Section SEGPA</div>
-        <button class="btn btn-sm" onclick="openClasseModal(true)" style="font-size:0.72rem;padding:3px 8px;border-color:var(--orange);color:var(--orange)">➕ Classe SEGPA</button>
+        <div style="font-size:0.85rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--orange)">Section SEGPA</div>
+        <button class="btn btn-sm" onclick="openClasseModal(true)" style="font-size:0.82rem;padding:3px 8px;border-color:var(--orange);color:var(--orange)">➕ Classe SEGPA</button>
       </div>`;
     if(segpaClasses.length) {
       html += `<div class="classes-list">${segpaClasses.map(renderClasseItem).join('')}</div>`;
@@ -2749,7 +2751,7 @@ function ulisAddCoordoField(value='') {
   if(!list) return;
   const div = document.createElement('div');
   div.style.cssText = 'display:flex;gap:6px;align-items:center';
-  div.innerHTML = `<input type="text" value="${value.replace(/"/g,'&quot;')}" placeholder="Prénom NOM — Fonction" style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;color:var(--text);font-family:'Source Sans 3',Arial,sans-serif;font-size:0.85rem;outline:none" class="ulis-coordo-input">
+  div.innerHTML = `<input type="text" value="${value.replace(/"/g,'&quot;')}" placeholder="Prénom NOM — Fonction" style="flex:1;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 10px;color:var(--text);font-family:'Inter',system-ui,Arial,sans-serif;font-size:0.85rem;outline:none" class="ulis-coordo-input">
     <button type="button" onclick="this.parentNode.remove()" style="background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 8px;cursor:pointer;color:var(--text3);font-size:0.8rem">✕</button>`;
   list.appendChild(div);
 }
@@ -2796,10 +2798,10 @@ function _ulisRenderAeshList() {
     const nb = (aff.creneaux||[]).length;
     return `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);overflow:hidden">
       <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px">
-        <span style="font-weight:600;font-size:0.88rem">🎯 ${a.prenom} ${a.nom} <span style="font-size:0.75rem;color:var(--text3)">${a.heures}h contrat</span></span>
+        <span style="font-weight:600;font-size:0.88rem">🎯 ${a.prenom} ${a.nom} <span style="font-size:0.85rem;color:var(--text3)">${a.heures}h contrat</span></span>
         <div style="display:flex;align-items:center;gap:8px">
-          <span style="font-size:0.78rem;color:${pctCol}">${totalH.toFixed(1)}h / 24h</span>
-          <button class="btn btn-sm" style="font-size:0.72rem" onclick="ulisTogglePlanning(${idx},this)">📅 Créneaux${nb?' ('+nb+')':''}</button>
+          <span style="font-size:0.85rem;color:${pctCol}">${totalH.toFixed(1)}h / 24h</span>
+          <button class="btn btn-sm" style="font-size:0.82rem" onclick="ulisTogglePlanning(${idx},this)">📅 Créneaux${nb?' ('+nb+')':''}</button>
           <button class="btn btn-danger" style="font-size:0.7rem;padding:3px 8px" onclick="ulisRemoveAesh(${a.id})">✕</button>
         </div>
       </div>
@@ -2825,18 +2827,18 @@ function ulisTogglePlanning(affIdx) {
 function _ulisRenderMiniPlanning(aff, idx) {
   const creneaux = aff.creneaux || [];
   if(!creneaux.length) {
-    return JOURS.map(j=>`<div style="background:var(--surface);border:1px dashed var(--border);border-radius:4px;padding:4px 6px;min-height:40px;font-size:0.68rem;color:var(--text3);text-align:center">${j.slice(0,2)}<br>—</div>`).join('');
+    return JOURS.map(j=>`<div style="background:var(--surface);border:1px dashed var(--border);border-radius:4px;padding:4px 6px;min-height:40px;font-size:0.82rem;color:var(--text3);text-align:center">${j.slice(0,2)}<br>—</div>`).join('');
   }
   return JOURS.map((j,ji)=>{
     const dayCr = creneaux.filter(c=>c.jour===ji);
     const slots = dayCr.length
       ? dayCr.map((c,ci)=>`<div style="background:rgba(245,200,66,.15);border-radius:3px;padding:2px 4px;margin-bottom:2px;display:flex;justify-content:space-between;align-items:center;gap:2px">
-          <span style="font-size:0.68rem;color:var(--yellow);white-space:nowrap">${c.debut}–${c.fin}</span>
+          <span style="font-size:0.82rem;color:var(--yellow);white-space:nowrap">${c.debut}–${c.fin}</span>
           <button type="button" onclick="ulisRemoveCreneau(${idx},${ci})" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:0.7rem;padding:0 2px;line-height:1">✕</button>
         </div>`).join('')
-      : '<span style="color:var(--text3);font-size:0.68rem">—</span>';
+      : '<span style="color:var(--text3);font-size:0.82rem">—</span>';
     return `<div style="background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 6px;min-height:40px">
-      <div style="font-size:0.65rem;color:var(--text3);font-weight:600;margin-bottom:3px">${j.slice(0,2)}</div>
+      <div style="font-size:0.82rem;color:var(--text3);font-weight:600;margin-bottom:3px">${j.slice(0,2)}</div>
       ${slots}
     </div>`;
   }).join('');
@@ -2872,7 +2874,7 @@ function _ulisRenderPlanningPicker(affIdx) {
   // Autres AESH du même dispositif (pour détecter les chevauchements)
   const autresAff = _ulisModalData.aeshAffectees.filter((_,i)=>i!==affIdx);
 
-  let html = `<div style="font-size:0.72rem;color:var(--text3);margin-bottom:8px">
+  let html = `<div style="font-size:0.82rem;color:var(--text3);margin-bottom:8px">
     🟡 = Actif pour cette AESH &nbsp;|&nbsp; 🟠 = Autre AESH déjà sur ce créneau (chevauchement !)
   </div>`;
   html += `<div style="display:grid;grid-template-columns:52px repeat(6,1fr);gap:2px;font-size:0.7rem">`;
@@ -2883,7 +2885,7 @@ function _ulisRenderPlanningPicker(affIdx) {
 
   // Rows
   slots.forEach((slot,si)=>{
-    html += `<div style="padding:3px 4px;background:var(--surface2);border-radius:3px;line-height:1.3;color:var(--text3);font-size:0.65rem">${slot.debut}<br>${slot.fin}</div>`;
+    html += `<div style="padding:3px 4px;background:var(--surface2);border-radius:3px;line-height:1.3;color:var(--text3);font-size:0.82rem">${slot.debut}<br>${slot.fin}</div>`;
     JOURS.forEach((_,ji)=>{
       const active = creneaux.some(c=>c.jour===ji && c.debut===slot.debut && c.fin===slot.fin);
       // Vérifier si une autre AESH a ce même créneau
@@ -3117,9 +3119,9 @@ function addAbsenceRow(abs=null) {
   row.id=rid;
   row.style.cssText='display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:7px;align-items:center;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 10px;';
   row.innerHTML=`
-    <select style="font-size:0.79rem;padding:5px 7px">${typeOpts}</select>
-    <div style="display:flex;gap:3px;align-items:center"><input type="date" value="${abs?.debut||''}" style="font-size:0.76rem;padding:5px 6px;flex:1"><span style="color:var(--text3);font-size:0.7rem">→</span><input type="date" value="${abs?.fin||''}" style="font-size:0.76rem;padding:5px 6px;flex:1"></div>
-    <select style="font-size:0.79rem;padding:5px 7px">${demiOpts}</select>
+    <select style="font-size:0.85rem;padding:5px 7px">${typeOpts}</select>
+    <div style="display:flex;gap:3px;align-items:center"><input type="date" value="${abs?.debut||''}" style="font-size:0.85rem;padding:5px 6px;flex:1"><span style="color:var(--text3);font-size:0.7rem">→</span><input type="date" value="${abs?.fin||''}" style="font-size:0.85rem;padding:5px 6px;flex:1"></div>
+    <select style="font-size:0.85rem;padding:5px 7px">${demiOpts}</select>
     <button type="button" onclick="document.getElementById('${rid}').remove()" style="background:none;border:none;color:var(--text3);cursor:pointer;font-size:1rem;padding:2px 6px">✕</button>`;
   document.getElementById('aesh-absences-list').appendChild(row);
 }
@@ -3219,7 +3221,7 @@ function renderAesh() {
       <td><strong>${a.prenom} ${a.nom}</strong><br>${statusBadge}${ulisBadge}${precos.length?`<br><span style="font-size:0.7rem;color:var(--text3)">${precos.join(' · ')}</span>`:''}</td>
       <td style="font-size:0.8rem">
         <div>${etabNom} <span style="color:var(--text3);font-size:0.7rem">(principal)</span></div>
-        ${secNoms.map(n=>`<div style="color:var(--text3);font-size:0.75rem">+ ${n}</div>`).join('')}
+        ${secNoms.map(n=>`<div style="color:var(--text3);font-size:0.85rem">+ ${n}</div>`).join('')}
       </td>
       <td><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
         <span style="white-space:nowrap">${hUsed.toFixed(1)}h / ${a.heures}h</span>
@@ -3227,7 +3229,7 @@ function renderAesh() {
         <div class="progress-bar" style="width:50px;flex-shrink:0"><div class="progress-fill" style="width:${pct}%;background:${pct>100?'var(--red)':pct>80?'var(--orange)':'var(--green)'}"></div></div>
       </div></td>
       <td>${nbEleves}</td>
-      <td style="font-size:0.78rem;color:var(--text2)">${(a.absences||[]).length} abs.${tpSlots.length?` · ${tpSlots.length} créneaux TP`:''}${ulisFiches.length?' · 🎯 ULIS':''}</td>
+      <td style="font-size:0.85rem;color:var(--text2)">${(a.absences||[]).length} abs.${tpSlots.length?` · ${tpSlots.length} créneaux TP`:''}${ulisFiches.length?' · 🎯 ULIS':''}</td>
       <td><div style="display:flex;gap:6px;align-items:center">
         <button class="btn btn-sm" onclick="editAesh(${a.id})">✏️</button>
         <button class="btn btn-danger" onclick="deleteAesh(${a.id})">🗑</button>
@@ -3722,7 +3724,7 @@ function buildMutAbsGrid(selected=[]) {
     DEMI.map((d,di)=>{
       const key=`${ji}_${d}`;
       const checked=selected.includes(key);
-      return `<label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.78rem;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 8px;">
+      return `<label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.85rem;color:var(--text2);background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:5px 8px;">
         <input type="checkbox" value="${key}" ${checked?'checked':''} style="width:auto;cursor:pointer"> ${j} ${d}
       </label>`;
     }).join('')
@@ -3751,16 +3753,16 @@ function buildAeshCheckboxes(existingAeshData=[]) {
     const sameEtab = a.etab===etabId || (a.etabsSec||[]).includes(etabId);
     const isChecked = existingAeshData.some(d=>d.aeshId===a.id) || (!existingAeshData.length && false);
     const quota = quotaMap[a.id]||'';
-    const etabLabel = sameEtab ? '<span style="color:var(--green);font-size:0.72rem"> ✓ étab.</span>' : '';
+    const etabLabel = sameEtab ? '<span style="color:var(--green);font-size:0.82rem"> ✓ étab.</span>' : '';
 
     return `<div style="display:flex;align-items:center;gap:10px;padding:6px 8px;background:var(--surface3);border-radius:var(--radius-sm);">
       <label style="display:flex;align-items:center;gap:6px;cursor:pointer;flex:1;min-width:0;">
         <input type="checkbox" value="${a.id}" id="aesh-cb-${a.id}" ${isChecked?'checked':''} style="width:auto;cursor:pointer" onchange="onAeshCbChange(${a.id})">
-        <span style="font-size:0.83rem;color:var(--text2)">${a.prenom} ${a.nom}${etabLabel} <span style="color:var(--text3);font-size:0.72rem">(${a.heures}h contrat)</span></span>
+        <span style="font-size:0.83rem;color:var(--text2)">${a.prenom} ${a.nom}${etabLabel} <span style="color:var(--text3);font-size:0.82rem">(${a.heures}h contrat)</span></span>
       </label>
       ${isInd ? `<div id="aesh-quota-wrap-${a.id}" style="display:${isChecked?'flex':'none'};align-items:center;gap:4px;flex-shrink:0">
-        <input type="number" id="aesh-quota-${a.id}" value="${quota}" min="1" max="35" placeholder="h/sem" style="width:65px;font-size:0.78rem;padding:3px 6px;text-align:center" title="Heures hebdomadaires pour cet élève">
-        <span style="font-size:0.72rem;color:var(--text3)">h/sem</span>
+        <input type="number" id="aesh-quota-${a.id}" value="${quota}" min="1" max="35" placeholder="h/sem" style="width:65px;font-size:0.85rem;padding:3px 6px;text-align:center" title="Heures hebdomadaires pour cet élève">
+        <span style="font-size:0.82rem;color:var(--text3)">h/sem</span>
       </div>` : ''}
     </div>`;
   }).join('');
@@ -3787,7 +3789,7 @@ function updateQuotaTotal() {
   })();
   const total = getCheckedAeshWithQuota().reduce((s,d)=>s+(d.quota||0),0);
   let hint = document.getElementById('aesh-quota-total');
-  if(!hint){ hint=document.createElement('div'); hint.id='aesh-quota-total'; hint.style.cssText='font-size:0.78rem;margin-top:6px;padding:5px 8px;border-radius:var(--radius-sm);'; document.getElementById('eleve-aesh-block').appendChild(hint); }
+  if(!hint){ hint=document.createElement('div'); hint.id='aesh-quota-total'; hint.style.cssText='font-size:0.85rem;margin-top:6px;padding:5px 8px;border-radius:var(--radius-sm);'; document.getElementById('eleve-aesh-block').appendChild(hint); }
   if(hEff>0){
     const ok=total===hEff, over=total>hEff;
     hint.style.background=over?'rgba(240,74,92,.1)':ok?'rgba(46,204,138,.1)':'rgba(79,142,247,.08)';
@@ -3874,9 +3876,9 @@ function renderEleves() {
     return `<tr>
       <td>
         <strong>${el.prenom} ${el.nom}</strong>${expBadge?' '+expBadge:''}
-        ${plans.length?`<br><span style="font-size:0.72rem;color:var(--text3)">${plans.join(' · ')}</span>`:''}
+        ${plans.length?`<br><span style="font-size:0.82rem;color:var(--text3)">${plans.join(' · ')}</span>`:''}
       </td>
-      <td>${classeNom}${el.niveau?`<br><span style="font-size:0.72rem;color:var(--text3)">${el.niveau}</span>`:''}${el.inUlis?'<br><span class="badge badge-yellow" style="margin-top:2px">ULIS</span>':''}</td>
+      <td>${classeNom}${el.niveau?`<br><span style="font-size:0.82rem;color:var(--text3)">${el.niveau}</span>`:''}${el.inUlis?'<br><span class="badge badge-yellow" style="margin-top:2px">ULIS</span>':''}</td>
       <td style="font-size:0.8rem">${etabNom}</td>
       <td>${aeshNoms||'<span style="color:var(--text3)">—</span>'}</td>
       <td>${notifBadges.join(' ')}</td>
@@ -4421,7 +4423,7 @@ function updateElevelBreadcrumb() {
     `<span style="color:var(--text2)">${etabNom}</span>`,
     classeNom?`<span style="color:var(--text2)"> › ${classeNom}</span>`:''
   ];
-  crumb.innerHTML=parts.join(' › ').replace(' › <span','')+` <button class="btn btn-sm" style="font-size:0.72rem;padding:2px 8px;margin-left:8px" onclick="document.getElementById('plan-eleve-classe').value='';onPlanEleveClasseChange()">Changer de classe</button>`;
+  crumb.innerHTML=parts.join(' › ').replace(' › <span','')+` <button class="btn btn-sm" style="font-size:0.82rem;padding:2px 8px;margin-left:8px" onclick="document.getElementById('plan-eleve-classe').value='';onPlanEleveClasseChange()">Changer de classe</button>`;
   crumb.style.display='block';
 }
 
@@ -4845,7 +4847,7 @@ function openCreneauActions(creneauId, context) {
   // Résumé du créneau
   let html = `<div style="font-size:0.82rem;padding:8px 10px;background:var(--surface2);border-radius:var(--radius-sm);margin-bottom:10px;line-height:1.5">
     <div><strong>${eleveNames||'(aucun élève)'}</strong></div>
-    <div style="color:var(--text3);font-size:0.78rem">
+    <div style="color:var(--text3);font-size:0.85rem">
       ${isUlis?'Dispositif ULIS':'AESH : '+(aesh?aesh.prenom+' '+aesh.nom:'—')}
       &nbsp;·&nbsp; ${c.debut}–${c.fin}
     </div>
@@ -4853,7 +4855,7 @@ function openCreneauActions(creneauId, context) {
 
   if(context === 'eleve') {
     // ── Créneau existant ──────────────────────────────────────────────────
-    html += `<div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">Ce créneau</div>`;
+    html += `<div style="font-size:0.82rem;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">Ce créneau</div>`;
 
     html += `<button class="btn" style="justify-content:flex-start;width:100%;margin-bottom:4px"
       onclick="${close}editCreneau(${creneauId})">✏️ Modifier les horaires</button>`;
@@ -4876,7 +4878,7 @@ function openCreneauActions(creneauId, context) {
 
     // ── Ajouter sur ce slot ───────────────────────────────────────────────
     if(eleveId) {
-      html += `<div style="font-size:0.72rem;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">Ajouter sur ce slot</div>`;
+      html += `<div style="font-size:0.82rem;font-weight:600;color:var(--text3);text-transform:uppercase;margin-bottom:6px">Ajouter sur ce slot</div>`;
 
       // Soin extérieur
       html += `<button class="btn" style="justify-content:flex-start;width:100%;margin-bottom:4px"
@@ -4899,7 +4901,7 @@ function openCreneauActions(creneauId, context) {
 
     // Alerte TP si l'AESH ne travaille pas sur ce créneau
     if(c.aesh && !aeshTravailleSurCreneau(c.aesh, c.jour, c.debut, c.fin)) {
-      html += `<div style="padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.76rem;color:var(--red);margin-bottom:6px">
+      html += `<div style="padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--red);margin-bottom:6px">
         ⚠️ Ce créneau chevauche un temps partiel de cette AESH.</div>`;
     }
 
@@ -5182,7 +5184,7 @@ function renderPlanningClasse() {
   // Pastilles AESH
   if(aeshsInClasse.length) {
     html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px">
-      ${aeshsInClasse.map(a=>`<span style="padding:3px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;font-size:0.76rem;cursor:pointer"
+      ${aeshsInClasse.map(a=>`<span style="padding:3px 10px;background:var(--surface2);border:1px solid var(--border);border-radius:20px;font-size:0.85rem;cursor:pointer"
         onclick="document.getElementById('plan-aesh-select').value=${a.id};switchPlanView('aesh',document.getElementById('tab-by-aesh'))">👤 ${a.prenom} ${a.nom}</span>`).join('')}
     </div>`;
   }
@@ -5196,15 +5198,15 @@ function renderPlanningClasse() {
     const hEff = el.heuresEffectives||el.heuresInd||null;
     const pct = hEff?Math.min(100,Math.round(totalH/hEff*100)):null;
     const col = pct===null?'var(--text3)':pct>=100?'var(--green)':pct>=80?'var(--orange)':'var(--red)';
-    const notif=(el.notifInd?'<span class="badge badge-blue" style="font-size:0.65rem">IND</span>':'')
-               +(el.notifMut?'<span class="badge badge-purple" style="font-size:0.65rem">MUT</span>':'')
-               +((el.notifUlis||el.inUlis)?'<span class="badge badge-yellow" style="font-size:0.65rem">ULIS</span>':'');
+    const notif=(el.notifInd?'<span class="badge badge-blue" style="font-size:0.82rem">IND</span>':'')
+               +(el.notifMut?'<span class="badge badge-purple" style="font-size:0.82rem">MUT</span>':'')
+               +((el.notifUlis||el.inUlis)?'<span class="badge badge-yellow" style="font-size:0.82rem">ULIS</span>':'');
     const aeshNoms=(el.aeshData||[]).map(d=>{const a=store.aesh.find(x=>x.id==d.aeshId);return a?a.prenom[0]+'.'+a.nom:'?';}).join(', ')||'—';
     html+=`<tr style="cursor:pointer" onclick="document.getElementById('plan-eleve-select').value=${el.id};switchPlanView('eleve',document.getElementById('tab-by-eleve'))">
       <td><strong>${el.prenom} ${el.nom}</strong></td>
-      <td>${notif||'<span style="color:var(--text3);font-size:0.72rem">—</span>'}</td>
+      <td>${notif||'<span style="color:var(--text3);font-size:0.82rem">—</span>'}</td>
       <td><span style="color:${col}">${totalH}h${hEff?' / '+hEff+'h':''}</span></td>
-      <td style="font-size:0.76rem;color:var(--text2)">${aeshNoms}</td>
+      <td style="font-size:0.85rem;color:var(--text2)">${aeshNoms}</td>
     </tr>`;
   });
   html += '</tbody></table></div>';
@@ -5273,7 +5275,7 @@ function renderPlanningEtab() {
     const hUlis = ulisAeshCr.filter(c=>c.aeshId===a.id).reduce((s,c)=>s+(timeToMin(c.fin)-timeToMin(c.debut))/60,0);
     const hTot = hCr+hUlis;
     const depasse = hTot > a.heures;
-    html += `<span style="padding:4px 12px;background:var(--surface2);border:1px solid ${depasse?'var(--red)':'var(--border)'};border-radius:20px;font-size:0.78rem;cursor:pointer"
+    html += `<span style="padding:4px 12px;background:var(--surface2);border:1px solid ${depasse?'var(--red)':'var(--border)'};border-radius:20px;font-size:0.85rem;cursor:pointer"
       onclick="document.getElementById('plan-aesh-select').value=${a.id};switchPlanView('aesh',document.getElementById('tab-by-aesh'))">
       👤 ${a.prenom} ${a.nom}
       <span style="color:${depasse?'var(--red)':'var(--text3)'}"> ${hTot.toFixed(0)}h/${a.heures}h</span>
@@ -5324,7 +5326,7 @@ function renderPlanningEtab() {
   html += `<div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px">`;
   aeshsEtab.forEach(a=>{
     const col=aeshColorMap[a.id];
-    html+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:0.74rem;color:var(--text2)"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${col}"></span>${a.prenom} ${a.nom}</span>`;
+    html+=`<span style="display:inline-flex;align-items:center;gap:4px;font-size:0.82rem;color:var(--text2)"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${col}"></span>${a.prenom} ${a.nom}</span>`;
   });
   html+=`</div>`;
 
@@ -5399,7 +5401,7 @@ function renderQuotas() {
       const etabsSec = (a.etabsSec||[]).map(id=>store.etablissements.find(e=>e.id===id)?.nom||'?').join(', ');
       html += `<tr>
         <td><strong>${a.prenom} ${a.nom}</strong><div style="font-size:0.7rem;color:var(--text3)">${a.statut||''}</div></td>
-        <td style="font-size:0.78rem">${etabNom}${etabsSec?'<div style="font-size:0.68rem;color:var(--text3)">+'+etabsSec+'</div>':''}</td>
+        <td style="font-size:0.85rem">${etabNom}${etabsSec?'<div style="font-size:0.82rem;color:var(--text3)">+'+etabsSec+'</div>':''}</td>
         <td>${a.heures}h</td>
         <td>${hEleves.toFixed(1)}h</td>
         <td>${hUlis>0?hUlis.toFixed(1)+'h':'—'}</td>
@@ -5407,7 +5409,7 @@ function renderQuotas() {
           <div style="width:60px;height:4px;background:var(--surface3);border-radius:2px;margin-top:2px"><div style="height:4px;width:${Math.min(100,pct)}%;background:${col};border-radius:2px"></div></div>
         </td>
         <td>${statut}</td>
-        <td style="font-size:0.74rem;color:var(--text2)">${elevesCouverts.map(id=>{const el=store.eleves.find(e=>e.id==id);return el?el.prenom+' '+el.nom[0]+'.':'?';}).join(', ')||'—'}</td>
+        <td style="font-size:0.82rem;color:var(--text2)">${elevesCouverts.map(id=>{const el=store.eleves.find(e=>e.id==id);return el?el.prenom+' '+el.nom[0]+'.':'?';}).join(', ')||'—'}</td>
       </tr>`;
     });
     html += '</tbody></table></div>';
@@ -5442,7 +5444,7 @@ function renderQuotas() {
     const pctColor=pct===null?'var(--text3)':pct>=100?'var(--green)':pct>=80?'var(--orange)':'var(--red)';
     const bar=hEff?`<div style="display:flex;align-items:center;gap:6px">
       <div class="progress-bar" style="width:70px"><div class="progress-fill" style="width:${Math.min(100,pct||0)}%;background:${pctColor}"></div></div>
-      <span style="font-size:0.72rem;color:${pctColor}">${pct||0}%</span></div>`:'—';
+      <span style="font-size:0.82rem;color:${pctColor}">${pct||0}%</span></div>`:'—';
     const notifParts=[];
     if(el.notifInd) notifParts.push('<span class="badge badge-blue">IND</span>');
     if(el.notifMut) notifParts.push('<span class="badge badge-purple">MUT</span>');
@@ -5456,7 +5458,7 @@ function renderQuotas() {
       <td style="color:var(--text2)">${hEff?hEff+'h':'—'}</td>
       <td><strong>${totalH}h</strong></td>
       <td>${bar}</td>
-      <td style="font-size:0.76rem;color:var(--text2)">${aeshNoms}</td>
+      <td style="font-size:0.85rem;color:var(--text2)">${aeshNoms}</td>
     </tr>`;
   });
   html+='</tbody></table></div>';
@@ -5514,10 +5516,10 @@ function exportQuotasPDF() {
   if(!tableEl) return alert('Rien à imprimer');
   const win = window.open('','_blank');
   win.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>${titre}</title>
-  <style>body{font-family:Arial,sans-serif;font-size:11px;margin:20px}
+  <style>body{font-family:Arial,sans-serif;font-size:13px;margin:20px}
   h2{font-size:14px;margin-bottom:12px}
   table{width:100%;border-collapse:collapse}
-  th{background:#f0f0f0;padding:5px 8px;text-align:left;border:1px solid #ccc;font-size:10px}
+  th{background:#f0f0f0;padding:5px 8px;text-align:left;border:1px solid #ccc;font-size:13px}
   td{padding:4px 8px;border:1px solid #eee;vertical-align:top}
   tr:nth-child(even){background:#fafafa}
   </style></head><body>
@@ -5657,17 +5659,17 @@ function onCreneauAeshEtabFilter() {
   });
 
   list.innerHTML = Object.entries(grouped).map(([etab,els])=>`
-    ${Object.keys(grouped).length>1?`<div style="font-size:0.68rem;font-weight:600;color:var(--text3);padding:3px 0;text-transform:uppercase">${etab}</div>`:''}
+    ${Object.keys(grouped).length>1?`<div style="font-size:0.82rem;font-weight:600;color:var(--text3);padding:3px 0;text-transform:uppercase">${etab}</div>`:''}
     ${els.map(el=>{
-      const notifBadge = el.notifInd?'<span class="badge badge-blue" style="font-size:0.62rem">IND</span>':
-                        el.notifMut?'<span class="badge badge-purple" style="font-size:0.62rem">MUT</span>':
-                        (el.notifUlis||el.inUlis)?'<span class="badge badge-yellow" style="font-size:0.62rem">ULIS</span>':'';
+      const notifBadge = el.notifInd?'<span class="badge badge-blue" style="font-size:0.82rem">IND</span>':
+                        el.notifMut?'<span class="badge badge-purple" style="font-size:0.82rem">MUT</span>':
+                        (el.notifUlis||el.inUlis)?'<span class="badge badge-yellow" style="font-size:0.82rem">ULIS</span>':'';
       const classe = store.classes.find(c=>c.id===el.classeId)?.nom||'';
       return `<label style="display:flex;align-items:center;gap:6px;cursor:pointer;padding:4px 6px;border-radius:var(--radius-sm)">
         <input type="radio" name="creneau-aesh-eleve" value="${el.id}" style="width:auto" onchange="updateCreneauRecap()">
         <span style="flex:1;font-size:0.82rem">${el.prenom} ${el.nom}</span>
         ${notifBadge}
-        <span style="font-size:0.68rem;color:var(--text3)">${classe}</span>
+        <span style="font-size:0.82rem;color:var(--text3)">${classe}</span>
       </label>`;
     }).join('')}
   `).join('');
@@ -5695,7 +5697,7 @@ function _initModeEleve(editId) {
   if(el) {
     info.style.display='block';
     info.innerHTML=`<strong>${el.prenom} ${el.nom}</strong> · ${classeNom} · ${etabNom}
-      ${notif?`<span style="margin-left:6px;font-size:0.76rem;color:var(--text3)">Notif : ${notif}</span>`:''}`;
+      ${notif?`<span style="margin-left:6px;font-size:0.85rem;color:var(--text3)">Notif : ${notif}</span>`:''}`;
   } else { info.style.display='none'; }
 
   // Bouton ULIS : visible si notifié ULIS + dispositif dans étab
@@ -5714,8 +5716,8 @@ function _initModeEleve(editId) {
   // Info ulisIndMode dans le contexte
   if(el && hasUlis && hasAccomp && info) {
     const modeLabel = ulisMode==='classe_only'
-      ? ' <span style="color:var(--orange);font-size:0.75rem">· AESH en classe de référence uniquement — pas d\'accompagnement sur les créneaux ULIS</span>'
-      : ' <span style="color:var(--accent);font-size:0.75rem">· AESH y compris en ULIS — créneaux IND et ULIS peuvent coexister</span>';
+      ? ' <span style="color:var(--orange);font-size:0.85rem">· AESH en classe de référence uniquement — pas d\'accompagnement sur les créneaux ULIS</span>'
+      : ' <span style="color:var(--accent);font-size:0.85rem">· AESH y compris en ULIS — créneaux IND et ULIS peuvent coexister</span>';
     info.innerHTML += modeLabel;
   }
 
@@ -5854,7 +5856,7 @@ function updateCreneauRecap() {
     const hNew=dureeTot/60;
     const hTotal=hExist+hNew;
     if(hTotal>aesh.heures) {
-      aeshAlerte=`<div style="margin-top:8px;padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.78rem;color:var(--red)">⚠️ <strong>${aesh.prenom} ${aesh.nom}</strong> : ${hExist.toFixed(1)}h existant + ${hNew.toFixed(1)}h = <strong>${hTotal.toFixed(1)}h / ${aesh.heures}h contrat</strong> — dépassement de ${(hTotal-aesh.heures).toFixed(1)}h</div>`;
+      aeshAlerte=`<div style="margin-top:8px;padding:6px 10px;background:rgba(240,74,92,.1);border:1px solid var(--red);border-radius:var(--radius-sm);font-size:0.85rem;color:var(--red)">⚠️ <strong>${aesh.prenom} ${aesh.nom}</strong> : ${hExist.toFixed(1)}h existant + ${hNew.toFixed(1)}h = <strong>${hTotal.toFixed(1)}h / ${aesh.heures}h contrat</strong> — dépassement de ${(hTotal-aesh.heures).toFixed(1)}h</div>`;
     }
   }
 
@@ -6439,7 +6441,7 @@ function onReqTypeEtabChange() {
     ? store.etablissements.filter(e=>typeFilter.includes(e.type))
     : store.etablissements;
   container.innerHTML = etabs.map(e=>`
-    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.79rem;color:var(--text2)">
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:0.85rem;color:var(--text2)">
       <input type="checkbox" value="${e.id}" checked onchange="renderRequete()" style="width:auto"> ${e.nom} <span style="color:var(--text3);font-size:0.7rem">(${e.type})</span>
     </label>`).join('');
   renderRequete();
@@ -6524,8 +6526,8 @@ function _renderColCheckboxes(container, orderedCols) {
     return `<div data-col="${col}" draggable="true"
       style="display:flex;align-items:center;gap:6px;padding:4px 6px;background:${isSortFirst?'rgba(79,142,247,.12)':'var(--surface3)'};border:1px solid ${isSortFirst?'var(--accent)':'var(--border)'};border-radius:var(--radius-sm);cursor:grab;user-select:none"
       ondragstart="reqColDragStart(event)" ondragover="reqColDragOver(event)" ondrop="reqColDrop(event)" ondragleave="reqColDragLeave(event)">
-      <span style="color:var(--text3);font-size:0.78rem;cursor:grab">☰</span>
-      <label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.78rem;color:${isSortFirst?'var(--accent)':'var(--text2)'};flex:1;font-weight:${isSortFirst?'600':'400'}">
+      <span style="color:var(--text3);font-size:0.85rem;cursor:grab">☰</span>
+      <label style="display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.85rem;color:${isSortFirst?'var(--accent)':'var(--text2)'};flex:1;font-weight:${isSortFirst?'600':'400'}">
         <input type="checkbox" value="${col}" checked onchange="renderRequete()" style="width:auto">
         ${col}${isSortFirst?' ↑↓':''}
       </label>
@@ -6797,7 +6799,7 @@ function reqTable(cols, rows, selectedCols=null) {
   return `<div class="table-wrap"><table>
     <thead><tr>${cols.map(c=>`<th>${c}</th>`).join('')}</tr></thead>
     <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c??'—'}</td>`).join('')}</tr>`).join('')}</tbody>
-  </table></div><div style="font-size:0.78rem;color:var(--text3);margin-top:8px">${rows.length} enregistrement${rows.length>1?'s':''}</div>`;
+  </table></div><div style="font-size:0.85rem;color:var(--text3);margin-top:8px">${rows.length} enregistrement${rows.length>1?'s':''}</div>`;
 }
 
 
@@ -6896,9 +6898,9 @@ function reqElevesParEtab(etabFilter, typeEtabFilter, notifFilter, search, selec
         const rows = eleves.sort((a,b)=>a.nom.localeCompare(b.nom,'fr')).map(el=>{
           const classe = store.classes.find(c=>c.id===el.classeId)?.nom||'—';
           const notifParts = [];
-          if(el.notifInd)  notifParts.push('<span class="badge badge-blue" style="font-size:0.62rem">IND</span>');
-          if(el.notifMut)  notifParts.push('<span class="badge badge-purple" style="font-size:0.62rem">MUT</span>');
-          if(el.notifUlis||el.inUlis) notifParts.push('<span class="badge badge-yellow" style="font-size:0.62rem">ULIS</span>');
+          if(el.notifInd)  notifParts.push('<span class="badge badge-blue" style="font-size:0.82rem">IND</span>');
+          if(el.notifMut)  notifParts.push('<span class="badge badge-purple" style="font-size:0.82rem">MUT</span>');
+          if(el.notifUlis||el.inUlis) notifParts.push('<span class="badge badge-yellow" style="font-size:0.82rem">ULIS</span>');
           const hNotif = fmtHNotif(el);
           const hPlan  = minToHours(calcQuotaEleve(el.id))+'h';
           const aesh   = (el.aeshIds||[]).map(id=>{const a=store.aesh.find(x=>x.id===id);return a?a.prenom[0]+'.'+a.nom:'?';}).join(', ')||'—';
@@ -6924,19 +6926,19 @@ function reqElevesParEtab(etabFilter, typeEtabFilter, notifFilter, search, selec
     cards.push(`<div style="padding:10px 14px;background:rgba(79,142,247,.08);border-left:4px solid var(--plan-ind);border-radius:var(--radius-sm)">
       <div style="font-size:0.7rem;color:var(--text3);margin-bottom:3px">Accompagnement IND</div>
       <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ind)">${totHInd}h/sem</div>
-      <div style="font-size:0.74rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div>
+      <div style="font-size:0.82rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div>
     </div>`);
   if(showMut && totNbMut>0)
     cards.push(`<div style="padding:10px 14px;background:rgba(124,92,252,.08);border-left:4px solid var(--plan-mut);border-radius:var(--radius-sm)">
       <div style="font-size:0.7rem;color:var(--text3);margin-bottom:3px">Accompagnement MUT</div>
       <div style="font-size:1.2rem;font-weight:700;color:var(--plan-mut)">${totHMut}h/sem</div>
-      <div style="font-size:0.74rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div>
+      <div style="font-size:0.82rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div>
     </div>`);
   if(showUlis && (totNbUlisDispo>0||totHUlis>0))
     cards.push(`<div style="padding:10px 14px;background:rgba(245,200,66,.08);border-left:4px solid var(--plan-ulis);border-radius:var(--radius-sm)">
       <div style="font-size:0.7rem;color:var(--text3);margin-bottom:3px">ULIS</div>
       <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ulis)">${totHUlis.toFixed(0)}h/sem</div>
-      <div style="font-size:0.74rem;color:var(--text2)">${totNbUlisDispo} dispositif${totNbUlisDispo!==1?'s':''}</div>
+      <div style="font-size:0.82rem;color:var(--text2)">${totNbUlisDispo} dispositif${totNbUlisDispo!==1?'s':''}</div>
     </div>`);
   if(cards.length > 1)
     cards.push(`<div style="padding:10px 14px;background:var(--surface3);border-left:4px solid var(--accent);border-radius:var(--radius-sm)">
@@ -6946,7 +6948,7 @@ function reqElevesParEtab(etabFilter, typeEtabFilter, notifFilter, search, selec
 
   if(cards.length)
     html += `<div style="margin-top:20px;padding:12px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm)">
-      <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-bottom:10px">Récapitulatif</div>
+      <div style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-bottom:10px">Récapitulatif</div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px">${cards.join('')}</div>
     </div>`;
 
@@ -7026,7 +7028,7 @@ function reqHeuresParEtabDetail(etabFilter, typeEtabFilter, notifFilter, search,
       html += `<div style="padding:6px 12px">${reqTable(COLS, rows, selectedCols)}</div>`;
     }
     if(ulisEtab.length && (!notifFilter||notifFilter==='ulis')) {
-      html += `<div style="padding:6px 14px 10px;font-size:0.79rem;color:var(--plan-ulis)">
+      html += `<div style="padding:6px 14px 10px;font-size:0.85rem;color:var(--plan-ulis)">
         🎯 ${ulisEtab.length} dispositif${ulisEtab.length>1?'s':''} ULIS — ${hUlis.toFixed(0)}h/sem</div>`;
     }
     html += `</div>`;
@@ -7039,9 +7041,9 @@ function reqHeuresParEtabDetail(etabFilter, typeEtabFilter, notifFilter, search,
   const showMut  = !notifFilter||notifFilter==='mut';
   const showUlis = !notifFilter||notifFilter==='ulis';
   const cards=[];
-  if(showInd  && totNbInd>0)   cards.push(`<div style="padding:8px 14px;background:rgba(79,142,247,.08);border-left:3px solid var(--plan-ind);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">IND</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-ind)">${totHInd}h/sem</div><div style="font-size:0.72rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div></div>`);
-  if(showMut  && totNbMut>0)   cards.push(`<div style="padding:8px 14px;background:rgba(124,92,252,.08);border-left:3px solid var(--plan-mut);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">MUT</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-mut)">${totHMut}h/sem</div><div style="font-size:0.72rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div></div>`);
-  if(showUlis && totNbDispo>0) cards.push(`<div style="padding:8px 14px;background:rgba(245,200,66,.08);border-left:3px solid var(--plan-ulis);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">ULIS</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-ulis)">${totHUlis.toFixed(0)}h/sem</div><div style="font-size:0.72rem;color:var(--text2)">${totNbDispo} dispositif${totNbDispo!==1?'s':''}</div></div>`);
+  if(showInd  && totNbInd>0)   cards.push(`<div style="padding:8px 14px;background:rgba(79,142,247,.08);border-left:3px solid var(--plan-ind);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">IND</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-ind)">${totHInd}h/sem</div><div style="font-size:0.82rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div></div>`);
+  if(showMut  && totNbMut>0)   cards.push(`<div style="padding:8px 14px;background:rgba(124,92,252,.08);border-left:3px solid var(--plan-mut);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">MUT</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-mut)">${totHMut}h/sem</div><div style="font-size:0.82rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div></div>`);
+  if(showUlis && totNbDispo>0) cards.push(`<div style="padding:8px 14px;background:rgba(245,200,66,.08);border-left:3px solid var(--plan-ulis);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">ULIS</div><div style="font-size:1.1rem;font-weight:700;color:var(--plan-ulis)">${totHUlis.toFixed(0)}h/sem</div><div style="font-size:0.82rem;color:var(--text2)">${totNbDispo} dispositif${totNbDispo!==1?'s':''}</div></div>`);
   const totAll=(showInd?totHInd:0)+(showMut?totHMut:0)+(showUlis?totHUlis:0);
   if(cards.length>1) cards.push(`<div style="padding:8px 14px;background:var(--surface3);border-left:3px solid var(--accent);border-radius:var(--radius-sm)"><div style="font-size:0.7rem;color:var(--text3)">Total</div><div style="font-size:1.3rem;font-weight:700;color:var(--accent)">${totAll.toFixed(0)}h/sem</div></div>`);
 
@@ -7117,29 +7119,29 @@ function reqHeuresParEtab(etabFilter, typeEtabFilter, selectedCols=null) {
   // Totaux en cartes colorées
   const totTotal = totHInd + totHMut + totHUlis;
   const totaux = `<div style="margin-top:14px;padding:12px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-sm)">
-    <div style="font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-bottom:10px">
+    <div style="font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:var(--text3);margin-bottom:10px">
       Totaux — ${rows.length} établissement${rows.length>1?'s':''}
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px">
       <div style="padding:10px 14px;background:rgba(79,142,247,.08);border-left:4px solid var(--plan-ind);border-radius:var(--radius-sm)">
-        <div style="font-size:0.72rem;color:var(--text3);margin-bottom:4px">Accompagnement IND</div>
-        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ind)">${totHInd}h<span style="font-size:0.75rem;font-weight:400">/sem</span></div>
-        <div style="font-size:0.76rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div>
+        <div style="font-size:0.82rem;color:var(--text3);margin-bottom:4px">Accompagnement IND</div>
+        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ind)">${totHInd}h<span style="font-size:0.85rem;font-weight:400">/sem</span></div>
+        <div style="font-size:0.85rem;color:var(--text2)">${totNbInd} élève${totNbInd!==1?'s':''}</div>
       </div>
       <div style="padding:10px 14px;background:rgba(124,92,252,.08);border-left:4px solid var(--plan-mut);border-radius:var(--radius-sm)">
-        <div style="font-size:0.72rem;color:var(--text3);margin-bottom:4px">Accompagnement MUT</div>
-        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-mut)">${totHMut}h<span style="font-size:0.75rem;font-weight:400">/sem</span></div>
-        <div style="font-size:0.76rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div>
+        <div style="font-size:0.82rem;color:var(--text3);margin-bottom:4px">Accompagnement MUT</div>
+        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-mut)">${totHMut}h<span style="font-size:0.85rem;font-weight:400">/sem</span></div>
+        <div style="font-size:0.85rem;color:var(--text2)">${totNbMut} élève${totNbMut!==1?'s':''}</div>
       </div>
       <div style="padding:10px 14px;background:rgba(245,200,66,.08);border-left:4px solid var(--plan-ulis);border-radius:var(--radius-sm)">
-        <div style="font-size:0.72rem;color:var(--text3);margin-bottom:4px">ULIS (CO dispositif)</div>
-        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ulis)">${totHUlis.toFixed(0)}h<span style="font-size:0.75rem;font-weight:400">/sem</span></div>
-        <div style="font-size:0.76rem;color:var(--text2)">${totNbDispo} dispositif${totNbDispo!==1?'s':''}</div>
+        <div style="font-size:0.82rem;color:var(--text3);margin-bottom:4px">ULIS (CO dispositif)</div>
+        <div style="font-size:1.2rem;font-weight:700;color:var(--plan-ulis)">${totHUlis.toFixed(0)}h<span style="font-size:0.85rem;font-weight:400">/sem</span></div>
+        <div style="font-size:0.85rem;color:var(--text2)">${totNbDispo} dispositif${totNbDispo!==1?'s':''}</div>
       </div>
       <div style="padding:10px 14px;background:var(--surface3);border-left:4px solid var(--accent);border-radius:var(--radius-sm)">
-        <div style="font-size:0.72rem;color:var(--text3);margin-bottom:4px">TOTAL NÉCESSAIRE</div>
-        <div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${totTotal.toFixed(0)}h<span style="font-size:0.75rem;font-weight:400">/sem</span></div>
-        <div style="font-size:0.76rem;color:var(--text2)">${totNbInd+totNbMut} élèves accompagnés + ${totNbDispo} ULIS</div>
+        <div style="font-size:0.82rem;color:var(--text3);margin-bottom:4px">TOTAL NÉCESSAIRE</div>
+        <div style="font-size:1.4rem;font-weight:700;color:var(--accent)">${totTotal.toFixed(0)}h<span style="font-size:0.85rem;font-weight:400">/sem</span></div>
+        <div style="font-size:0.85rem;color:var(--text2)">${totNbInd+totNbMut} élèves accompagnés + ${totNbDispo} ULIS</div>
       </div>
     </div>
   </div>`;
@@ -7505,7 +7507,7 @@ function renderPlanningUlis(ulisId, container) {
   let html = `<div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;flex-wrap:wrap;gap:8px">
     <div>
       <div style="font-weight:700;font-size:0.92rem;color:var(--yellow)">🎯 ULIS — ${etab?.nom||'?'}</div>
-      <div style="font-size:0.76rem;color:var(--text2)">${coordoStr?'Coordo : '+coordoStr+' · ':''} ${aeshAffectees.length} AESH · ${elevesUlis.length} élève${elevesUlis.length!==1?'s':''}</div>
+      <div style="font-size:0.85rem;color:var(--text2)">${coordoStr?'Coordo : '+coordoStr+' · ':''} ${aeshAffectees.length} AESH · ${elevesUlis.length} élève${elevesUlis.length!==1?'s':''}</div>
     </div>
     <div style="display:flex;gap:6px">
       <button class="btn btn-sm" onclick="openCreneauUlisEleve(${ulisId},null,null)">➕ Créneau élève</button>
@@ -7518,7 +7520,7 @@ function renderPlanningUlis(ulisId, container) {
     html+=`<div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px">`;
     elevesUlis.forEach(el=>{
       const nbCr=creneauxUlisEleves.filter(c=>(c.eleveIds||[c.eleve]).includes(el.id)).length;
-      html+=`<span style="padding:3px 10px;background:var(--surface2);border:1px solid ${nbCr?'rgba(245,200,66,.4)':'var(--border)'};border-radius:20px;font-size:0.76rem;cursor:pointer"
+      html+=`<span style="padding:3px 10px;background:var(--surface2);border:1px solid ${nbCr?'rgba(245,200,66,.4)':'var(--border)'};border-radius:20px;font-size:0.85rem;cursor:pointer"
         onclick="document.getElementById('plan-eleve-select').value=${el.id};switchPlanView('eleve',document.getElementById('tab-by-eleve'))">${el.prenom} ${el.nom}${nbCr?' ('+nbCr+')':''}</span>`;
     });
     html+=`</div>`;
@@ -7688,7 +7690,7 @@ async function exportData() {
 function _showExportConfirm(filename) {
   const bar = document.getElementById('export-confirm-bar');
   if(!bar) return;
-  bar.innerHTML = `✅ Exporté : <strong>${filename}</strong> — <span style="font-size:0.78rem;color:var(--text3)">${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</span>`;
+  bar.innerHTML = `✅ Exporté : <strong>${filename}</strong> — <span style="font-size:0.85rem;color:var(--text3)">${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</span>`;
   bar.style.display = 'flex';
   setTimeout(()=>{ bar.style.display='none'; }, 5000);
 }
@@ -7872,10 +7874,10 @@ function buildReqContextHeader() {
   ].filter(Boolean).join('  ·  ');
 
   return `<div class="req-ctx" style="margin-bottom:16px;padding:12px 16px;background:var(--surface2);border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0">
-    <div style="font-family:'Inter',Arial,sans-serif;font-weight:700;font-size:0.9rem;color:var(--text);margin-bottom:3px;display:block">${pialNom}</div>
+    <div style="font-family:'Inter',system-ui,Arial,sans-serif;font-weight:700;font-size:0.9rem;color:var(--text);margin-bottom:3px;display:block">${pialNom}</div>
     <div style="font-size:0.88rem;font-weight:600;color:var(--accent);margin-bottom:${params?'5px':'0'}">${typeLabel}</div>
-    ${params?`<div style="font-size:0.78rem;color:var(--text3)">${params}</div>`:''}
-    <div style="font-size:0.72rem;color:var(--text3);margin-top:4px;font-style:italic">Édité le ${new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})} à ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</div>
+    ${params?`<div style="font-size:0.85rem;color:var(--text3)">${params}</div>`:''}
+    <div style="font-size:0.82rem;color:var(--text3);margin-top:4px;font-style:italic">Édité le ${new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})} à ${new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</div>
   </div>`;
 }
 
@@ -7884,7 +7886,7 @@ function buildReqContextHeader() {
 // ============================================================
 
 // CSS commune pour tous les exports PDF
-const PDF_PRINT_CSS = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${TITLE}</title><style>\n  :root{--blue:#2563eb;--blue-light:#eff6ff;--purple:#7c3aed;--purple-light:#f5f3ff;\n    --yellow:#b45309;--yellow-light:#fffbeb;--red:#dc2626;--green:#16a34a;\n    --grey:#64748b;--border:#e2e8f0;--text:#1e293b;--text2:#475569;--text3:#94a3b8}\n  *{box-sizing:border-box;margin:0;padding:0}\n  body{font-family:\'Segoe UI\',Arial,sans-serif;font-size:10.5px;color:var(--text);\n    background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}\n  @media screen{body{padding:20px;max-width:1100px;margin:0 auto}}\n  @media print{@page{margin:1.2cm 1cm;size:A4 landscape}body{font-size:9px}}\n\n  /* En-tête */\n  .pdf-header{display:flex;justify-content:space-between;align-items:flex-end;\n    padding-bottom:10px;margin-bottom:16px;border-bottom:3px solid var(--blue)}\n  .pdf-header h1{font-size:16px;font-weight:700;color:var(--blue);letter-spacing:-.3px}\n  .pdf-header .sub{font-size:9.5px;color:var(--text2);margin-top:3px}\n  .pdf-header .org{font-size:10px;font-weight:600;color:var(--text2);text-align:right}\n\n  /* Footer */\n  .pdf-footer{margin-top:18px;padding-top:8px;border-top:1px solid var(--border);\n    font-size:8px;color:var(--text3);text-align:center;display:flex;justify-content:space-between}\n\n  /* Tables requêtes */\n  table{border-collapse:collapse;width:100%;margin:8px 0}\n  th{background:var(--blue);color:#fff;padding:6px 8px;font-size:9px;\n    text-transform:uppercase;letter-spacing:.4px;font-weight:600;text-align:left;\n    white-space:nowrap}\n  td{padding:5px 8px;border-bottom:1px solid var(--border);vertical-align:top;font-size:9.5px}\n  tr:nth-child(even) td{background:#f8fafc}\n  tr:hover td{background:#eff6ff}\n\n  /* Badges */\n  .badge-ind{display:inline-block;padding:1px 6px;background:var(--blue-light);\n    color:var(--blue);border-radius:3px;font-size:8.5px;font-weight:700}\n  .badge-mut{display:inline-block;padding:1px 6px;background:var(--purple-light);\n    color:var(--purple);border-radius:3px;font-size:8.5px;font-weight:700}\n  .badge-ulis{display:inline-block;padding:1px 6px;background:var(--yellow-light);\n    color:var(--yellow);border-radius:3px;font-size:8.5px;font-weight:700}\n  .badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:8.5px;font-weight:600}\n  .badge-blue{background:var(--blue-light);color:var(--blue)}\n  .badge-purple{background:var(--purple-light);color:var(--purple)}\n  .badge-orange{background:#fff7ed;color:#c2410c}\n  .badge-yellow{background:var(--yellow-light);color:var(--yellow)}\n\n  /* Blocs étab dans requêtes */\n  .etab-block{margin:14px 0 0;border:1.5px solid var(--border);border-radius:6px;overflow:hidden;\n    page-break-inside:avoid}\n  .etab-header{padding:7px 12px;background:#f1f5f9;border-bottom:1px solid var(--border);\n    display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}\n  .etab-name{font-size:11px;font-weight:700;color:var(--text)}\n  .etab-totaux{font-size:9px;display:flex;gap:10px;flex-wrap:wrap}\n  .h-ind{color:var(--blue);font-weight:700}\n  .h-mut{color:var(--purple);font-weight:700}\n  .h-ulis{color:var(--yellow);font-weight:700}\n  .h-total{color:var(--text);font-weight:700;border-left:1px solid var(--border);padding-left:8px}\n\n  /* Cards totaux */\n  .totaux-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:14px}\n  .tot-card{padding:9px 12px;border-radius:5px;border-left:4px solid}\n  .tot-ind{background:var(--blue-light);border-color:var(--blue)}\n  .tot-mut{background:var(--purple-light);border-color:var(--purple)}\n  .tot-ulis{background:var(--yellow-light);border-color:var(--yellow)}\n  .tot-total{background:#f0fdf4;border-color:var(--green)}\n  .tot-label{font-size:8px;text-transform:uppercase;letter-spacing:.4px;color:var(--text2);margin-bottom:3px}\n  .tot-value{font-size:15px;font-weight:700}\n  .tot-sub{font-size:8.5px;color:var(--text2);margin-top:2px}\n\n  /* Grille planning */\n  .plan-table{border-collapse:collapse;width:100%;font-size:8px;table-layout:fixed}\n  .plan-table th{background:#1e3a5f;color:#fff;padding:5px 4px;text-align:center;font-size:8.5px}\n  .plan-table td{border:1px solid var(--border);padding:2px;vertical-align:top;height:22px}\n  .plan-table .time-col{background:#f8fafc;color:var(--text3);font-size:7.5px;\n    padding:2px 4px;white-space:nowrap;text-align:right;font-weight:600}\n  .plan-evt{border-radius:3px;padding:2px 4px;margin-bottom:1px;font-size:7.5px;line-height:1.4;\n    border-left:3px solid}\n  .plan-evt-label{font-weight:700}\n  .plan-evt-sub{color:#555;font-size:7px}\n  .plan-ind{background:#eff6ff;border-color:#2563eb}\n  .plan-mut{background:#f5f3ff;border-color:#7c3aed}\n  .plan-ulis{background:#fffbeb;border-color:#b45309}\n  .plan-soin{background:#f8fafc;border-color:#64748b}\n  .plan-aesh-row td{background:#fafafa}\n  .plan-aesh-row td:first-child{background:#f1f5f9;font-size:8.5px;font-weight:700;color:var(--text)}\n\n  /* Section title */\n  .section-title{font-size:11px;font-weight:700;color:var(--text);margin:16px 0 6px;\n    padding-bottom:4px;border-bottom:2px solid var(--border)}\n\n  /* Compteur */\n  .count{font-size:8.5px;color:var(--text2);margin-top:4px}\n</style></head><body>';
+const PDF_PRINT_CSS = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${TITLE}</title><style>\n  :root{--blue:#2563eb;--blue-light:#eff6ff;--purple:#7c3aed;--purple-light:#f5f3ff;\n    --yellow:#b45309;--yellow-light:#fffbeb;--red:#dc2626;--green:#16a34a;\n    --grey:#64748b;--border:#e2e8f0;--text:#1e293b;--text2:#475569;--text3:#94a3b8}\n  *{box-sizing:border-box;margin:0;padding:0}\n  body{font-family:\'Segoe UI\',Arial,sans-serif;font-size:12px;color:var(--text);\n    background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}\n  @media screen{body{padding:20px;max-width:1100px;margin:0 auto}}\n  @media print{@page{margin:1.2cm 1cm;size:A4 landscape}body{font-size:13px}}\n\n  /* En-tête */\n  .pdf-header{display:flex;justify-content:space-between;align-items:flex-end;\n    padding-bottom:10px;margin-bottom:16px;border-bottom:3px solid var(--blue)}\n  .pdf-header h1{font-size:18px;font-weight:700;color:var(--blue);letter-spacing:-.3px}\n  .pdf-header .sub{font-size:12px;color:var(--text2);margin-top:3px}\n  .pdf-header .org{font-size:13px;font-weight:600;color:var(--text2);text-align:right}\n\n  /* Footer */\n  .pdf-footer{margin-top:18px;padding-top:8px;border-top:1px solid var(--border);\n    font-size:13px;color:var(--text3);text-align:center;display:flex;justify-content:space-between}\n\n  /* Tables requêtes */\n  table{border-collapse:collapse;width:100%;margin:8px 0}\n  th{background:var(--blue);color:#fff;padding:7px 10px;font-size:13px;\n    text-transform:uppercase;letter-spacing:.4px;font-weight:600;text-align:left;\n    white-space:nowrap}\n  td{padding:6px 10px;border-bottom:1px solid var(--border);vertical-align:top;font-size:12px}\n  tr:nth-child(even) td{background:#f8fafc}\n  tr:hover td{background:#eff6ff}\n\n  /* Badges */\n  .badge-ind{display:inline-block;padding:1px 6px;background:var(--blue-light);\n    color:var(--blue);border-radius:3px;font-size:12px;font-weight:700}\n  .badge-mut{display:inline-block;padding:1px 6px;background:var(--purple-light);\n    color:var(--purple);border-radius:3px;font-size:12px;font-weight:700}\n  .badge-ulis{display:inline-block;padding:1px 6px;background:var(--yellow-light);\n    color:var(--yellow);border-radius:3px;font-size:12px;font-weight:700}\n  .badge{display:inline-block;padding:1px 6px;border-radius:3px;font-size:12px;font-weight:600}\n  .badge-blue{background:var(--blue-light);color:var(--blue)}\n  .badge-purple{background:var(--purple-light);color:var(--purple)}\n  .badge-orange{background:#fff7ed;color:#c2410c}\n  .badge-yellow{background:var(--yellow-light);color:var(--yellow)}\n\n  /* Blocs étab dans requêtes */\n  .etab-block{margin:14px 0 0;border:1.5px solid var(--border);border-radius:6px;overflow:hidden;\n    page-break-inside:avoid}\n  .etab-header{padding:7px 12px;background:#f1f5f9;border-bottom:1px solid var(--border);\n    display:flex;justify-content:space-between;align-items:center;gap:6px;flex-wrap:wrap}\n  .etab-name{font-size:13px;font-weight:700;color:var(--text)}\n  .etab-totaux{font-size:13px;display:flex;gap:10px;flex-wrap:wrap}\n  .h-ind{color:var(--blue);font-weight:700}\n  .h-mut{color:var(--purple);font-weight:700}\n  .h-ulis{color:var(--yellow);font-weight:700}\n  .h-total{color:var(--text);font-weight:700;border-left:1px solid var(--border);padding-left:8px}\n\n  /* Cards totaux */\n  .totaux-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:14px}\n  .tot-card{padding:9px 12px;border-radius:5px;border-left:4px solid}\n  .tot-ind{background:var(--blue-light);border-color:var(--blue)}\n  .tot-mut{background:var(--purple-light);border-color:var(--purple)}\n  .tot-ulis{background:var(--yellow-light);border-color:var(--yellow)}\n  .tot-total{background:#f0fdf4;border-color:var(--green)}\n  .tot-label{font-size:13px;text-transform:uppercase;letter-spacing:.4px;color:var(--text2);margin-bottom:3px}\n  .tot-value{font-size:15px;font-weight:700}\n  .tot-sub{font-size:12px;color:var(--text2);margin-top:2px}\n\n  /* Grille planning */\n  .plan-table{border-collapse:collapse;width:100%;font-size:13px;table-layout:fixed}\n  .plan-table th{background:#1e3a5f;color:#fff;padding:5px 4px;text-align:center;font-size:12px}\n  .plan-table td{border:1px solid var(--border);padding:2px;vertical-align:top;height:22px}\n  .plan-table .time-col{background:#f8fafc;color:var(--text3);font-size:12px;\n    padding:2px 4px;white-space:nowrap;text-align:right;font-weight:600}\n  .plan-evt{border-radius:3px;padding:2px 4px;margin-bottom:1px;font-size:12px;line-height:1.4;\n    border-left:3px solid}\n  .plan-evt-label{font-weight:700}\n  .plan-evt-sub{color:#555;font-size:13px}\n  .plan-ind{background:#eff6ff;border-color:#2563eb}\n  .plan-mut{background:#f5f3ff;border-color:#7c3aed}\n  .plan-ulis{background:#fffbeb;border-color:#b45309}\n  .plan-soin{background:#f8fafc;border-color:#64748b}\n  .plan-aesh-row td{background:#fafafa}\n  .plan-aesh-row td:first-child{background:#f1f5f9;font-size:12px;font-weight:700;color:var(--text)}\n\n  /* Section title */\n  .section-title{font-size:13px;font-weight:700;color:var(--text);margin:16px 0 6px;\n    padding-bottom:4px;border-bottom:2px solid var(--border)}\n\n  /* Compteur */\n  .count{font-size:12px;color:var(--text2);margin-top:4px}\n</style></head><body>';
 function pdfPage(title, subtitle, org, content, date) {
   return PDF_PRINT_CSS.replace('${TITLE}', title) +
     `<div class="pdf-header">
@@ -7892,7 +7894,7 @@ function pdfPage(title, subtitle, org, content, date) {
         <h1>${title}</h1>
         ${subtitle?`<div class="sub">${subtitle}</div>`:''}
       </div>
-      <div class="org">${org?`<strong>${org}</strong><br>`:''}<span style="font-size:8.5px;color:#94a3b8">${date}</span></div>
+      <div class="org">${org?`<strong>${org}</strong><br>`:''}<span style="font-size:12px;color:#94a3b8">${date}</span></div>
     </div>
     ${content}
     <div class="pdf-footer"><span>GestEBEP</span><span>${date}</span></div>
@@ -7971,14 +7973,14 @@ function exportPlanningPDF(view) {
     const BG={ind:'#eef4ff',mut:'#f0eeff',ulis:'#fffbe6',aesh_co:'#fffbe6',soin:'#f0f1f3',normal:'#eef4ff'};
 
     // Tableau : une ligne par AESH, colonnes = jours
-    let gridHTML = `<table style="width:100%;border-collapse:collapse;font-size:8px;table-layout:fixed">
+    let gridHTML = `<table style="width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed">
       <colgroup>
         <col style="width:90px">
         ${JOURS.map(()=>'<col>').join('')}
       </colgroup>
       <thead><tr>
-        <th style="background:#2a5298;color:#fff;border:1px solid #1a3a7a;padding:4px 6px;text-align:left;font-size:8px">AESH</th>
-        ${JOURS.map(j=>`<th style="background:#2a5298;color:#fff;border:1px solid #1a3a7a;padding:4px;text-align:center;font-size:8px">${j}</th>`).join('')}
+        <th style="background:#2a5298;color:#fff;border:1px solid #1a3a7a;padding:4px 6px;text-align:left;font-size:13px">AESH</th>
+        ${JOURS.map(j=>`<th style="background:#2a5298;color:#fff;border:1px solid #1a3a7a;padding:4px;text-align:center;font-size:13px">${j}</th>`).join('')}
       </tr></thead><tbody>`;
 
     aeshsEtab.forEach((aesh, ai)=>{
@@ -7994,9 +7996,9 @@ function exportPlanningPDF(view) {
       // Calculer la hauteur max en minutes pour cette AESH (pour la cellule gauche)
       // Afficher dans chaque colonne jour tous les créneaux de cette AESH
       gridHTML += `<tr style="background:${rowBg}">
-        <td style="border:1px solid #ddd;padding:4px 6px;vertical-align:top;font-size:7.5px;background:${rowBg}">
+        <td style="border:1px solid #ddd;padding:4px 6px;vertical-align:top;font-size:12px;background:${rowBg}">
           <div style="font-weight:700;color:#1a1a2e">${aesh.prenom} ${aesh.nom}</div>
-          <div style="color:#888;font-size:6.5px">${aesh.heures}h/sem</div>
+          <div style="color:#888;font-size:12px">${aesh.heures}h/sem</div>
         </td>`;
 
       for(let j=0;j<JOURS.length;j++){
@@ -8016,9 +8018,9 @@ function exportPlanningPDF(view) {
           const names = type==='aesh_co'?'CO ULIS':
             type==='ulis'?'ULIS':
             eleveIds.map(id=>{const el=store.eleves.find(e=>e.id===id);return el?el.prenom[0]+'.'+el.nom:'?';}).join('+');
-          return `<div style="border-left:3px solid ${col};background:${bg};border-radius:2px;padding:2px 4px;margin-bottom:2px;font-size:7px;line-height:1.4">
+          return `<div style="border-left:3px solid ${col};background:${bg};border-radius:2px;padding:2px 4px;margin-bottom:2px;font-size:13px;line-height:1.4">
             <div style="font-weight:700;color:${col}">${c.debut}–${c.fin}</div>
-            <div style="color:#555;font-size:6.5px">${names}</div>
+            <div style="color:#555;font-size:12px">${names}</div>
           </div>`;
         }).join('');
 
@@ -8031,12 +8033,12 @@ function exportPlanningPDF(view) {
 
     // Table de synthèse des présences par créneau (qui est là quand ?)
     // Grille horaire × jour — AESH présents à chaque demi-heure
-    gridHTML += `<div style="margin-top:14px;margin-bottom:6px;font-size:10px;font-weight:700;color:#1a1a2e;border-bottom:1px solid #ccc;padding-bottom:4px">Présences par créneau</div>`;
-    gridHTML += `<table style="width:100%;border-collapse:collapse;font-size:7.5px;table-layout:fixed">
+    gridHTML += `<div style="margin-top:14px;margin-bottom:6px;font-size:13px;font-weight:700;color:#1a1a2e;border-bottom:1px solid #ccc;padding-bottom:4px">Présences par créneau</div>`;
+    gridHTML += `<table style="width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed">
       <colgroup><col style="width:45px">${JOURS.map(()=>'<col>').join('')}</colgroup>
       <thead><tr>
-        <th style="background:#eef2f7;border:1px solid #ccc;padding:2px;font-size:7px"></th>
-        ${JOURS.map(j=>`<th style="background:#eef2f7;border:1px solid #ccc;padding:2px;text-align:center;font-size:7px">${j}</th>`).join('')}
+        <th style="background:#eef2f7;border:1px solid #ccc;padding:2px;font-size:13px"></th>
+        ${JOURS.map(j=>`<th style="background:#eef2f7;border:1px solid #ccc;padding:2px;text-align:center;font-size:13px">${j}</th>`).join('')}
       </tr></thead><tbody>`;
 
     HORAIRES_PRINT.forEach((h,hi)=>{
@@ -8052,12 +8054,12 @@ function exportPlanningPDF(view) {
         });
         if(presents.length) anyPresent=true;
         return presents.length
-          ? `<td style="border:1px solid #eee;padding:2px;background:#f0f8ff;font-size:6.5px;line-height:1.3">${presents.map(a=>a.prenom[0]+'.'+a.nom).join('<br>')}</td>`
+          ? `<td style="border:1px solid #eee;padding:2px;background:#f0f8ff;font-size:12px;line-height:1.3">${presents.map(a=>a.prenom[0]+'.'+a.nom).join('<br>')}</td>`
           : `<td style="border:1px solid #eee;padding:2px"></td>`;
       });
       // N'afficher que les lignes où quelqu'un est présent
       if(anyPresent) {
-        gridHTML += `<tr><td style="background:#f8f9fb;border:1px solid #ddd;padding:1px 3px;font-size:6.5px;color:#888;white-space:nowrap">${h}</td>${cells.join('')}</tr>`;
+        gridHTML += `<tr><td style="background:#f8f9fb;border:1px solid #ddd;padding:1px 3px;font-size:12px;color:#888;white-space:nowrap">${h}</td>${cells.join('')}</tr>`;
       }
     });
     gridHTML += '</tbody></table>';
@@ -8066,17 +8068,17 @@ function exportPlanningPDF(view) {
     const w=window.open('','_blank');
     const pialNomL=pialNom?`<strong>${structType} ${pialNom}</strong>`:'';
     w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title><style>
-      body{font-family:Arial,sans-serif;font-size:10px;margin:0;color:#222;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      body{font-family:Arial,sans-serif;font-size:13px;margin:0;color:#222;-webkit-print-color-adjust:exact;print-color-adjust:exact}
       @media print{@page{margin:0.8cm;size:A4 landscape}body{margin:0}}
       @media screen{body{padding:12px}}
     </style></head><body>
       <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;padding-bottom:6px;border-bottom:2px solid #2a5298">
         <div><h1 style="font-size:13px;margin:0 0 2px;color:#1a1a2e">${title}</h1>
-        <div style="font-size:9px;color:#666">${subtitle?subtitle+' · ':''}${date}</div></div>
-        <div style="font-size:9px;color:#666;text-align:right">${pialNomL}</div>
+        <div style="font-size:13px;color:#666">${subtitle?subtitle+' · ':''}${date}</div></div>
+        <div style="font-size:13px;color:#666;text-align:right">${pialNomL}</div>
       </div>
       ${gridHTML}
-      <div style="margin-top:8px;padding-top:5px;border-top:1px solid #ddd;font-size:7px;color:#bbb;text-align:center">GestEBEP · ${date}</div>
+      <div style="margin-top:8px;padding-top:5px;border-top:1px solid #ddd;font-size:13px;color:#bbb;text-align:center">GestEBEP · ${date}</div>
     </body></html>`);
     w.document.close();
     setTimeout(()=>{w.focus();w.print();},500);
@@ -8158,7 +8160,7 @@ function exportPlanningPDF(view) {
   });
   gridHTML+='</tbody></table>';
 
-  const legend = `<div style="display:flex;gap:16px;margin-top:10px;padding:6px 10px;background:#f8fafc;border-radius:4px;font-size:8px;color:#475569">
+  const legend = `<div style="display:flex;gap:16px;margin-top:10px;padding:6px 10px;background:#f8fafc;border-radius:4px;font-size:13px;color:#475569">
     <span><span style="display:inline-block;width:12px;height:12px;background:#eff6ff;border:2px solid #2563eb;border-radius:2px;margin-right:4px;vertical-align:middle"></span>Individuel</span>
     <span><span style="display:inline-block;width:12px;height:12px;background:#f5f3ff;border:2px solid #7c3aed;border-radius:2px;margin-right:4px;vertical-align:middle"></span>Mutualisé</span>
     <span><span style="display:inline-block;width:12px;height:12px;background:#fffbeb;border:2px solid #b45309;border-radius:2px;margin-right:4px;vertical-align:middle"></span>ULIS</span>
@@ -8320,7 +8322,7 @@ function buildSoinsChips(soinsData=[]) {
         background:${active?'rgba(79,142,247,.1)':'var(--surface3)'};
         color:${active?'var(--accent)':'var(--text2)'};
         font-weight:${active?'600':'400'};transition:all .15s">
-      ${type}${count>1?` <span style="background:var(--accent);color:#fff;border-radius:10px;padding:0 5px;font-size:0.68rem">${count}</span>`:''}${noSlot?' <span style="font-size:0.68rem;color:var(--text3)">(pas de créneau)</span>':''}
+      ${type}${count>1?` <span style="background:var(--accent);color:#fff;border-radius:10px;padding:0 5px;font-size:0.82rem">${count}</span>`:''}${noSlot?' <span style="font-size:0.82rem;color:var(--text3)">(pas de créneau)</span>':''}
     </button>`;
   }).join('');
 
@@ -8336,11 +8338,11 @@ function buildSoinsChips(soinsData=[]) {
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
         <span style="font-weight:600;font-size:0.83rem;color:var(--accent)">🏥 ${s.type}${labelSuffix}</span>
         <div style="display:flex;gap:6px">
-          <button type="button" onclick="addSoinSeance('${s.type}')" title="Ajouter une autre séance ${s.type}" style="background:rgba(79,142,247,.12);border:1px solid var(--accent);color:var(--accent);border-radius:var(--radius-sm);padding:2px 8px;font-size:0.72rem;cursor:pointer;font-family:inherit">+ séance</button>
-          <button type="button" onclick="removeSoinEntry(${i})" title="Supprimer cette séance" style="background:rgba(240,74,92,.1);border:1px solid var(--red);color:var(--red);border-radius:var(--radius-sm);padding:2px 8px;font-size:0.72rem;cursor:pointer;font-family:inherit">✕</button>
+          <button type="button" onclick="addSoinSeance('${s.type}')" title="Ajouter une autre séance ${s.type}" style="background:rgba(79,142,247,.12);border:1px solid var(--accent);color:var(--accent);border-radius:var(--radius-sm);padding:2px 8px;font-size:0.82rem;cursor:pointer;font-family:inherit">+ séance</button>
+          <button type="button" onclick="removeSoinEntry(${i})" title="Supprimer cette séance" style="background:rgba(240,74,92,.1);border:1px solid var(--red);color:var(--red);border-radius:var(--radius-sm);padding:2px 8px;font-size:0.82rem;cursor:pointer;font-family:inherit">✕</button>
         </div>
       </div>
-      ${noSlot ? '<div style="font-size:0.78rem;color:var(--text3)">Pas de créneau horaire (matériel / transport)</div>' : `
+      ${noSlot ? '<div style="font-size:0.85rem;color:var(--text3)">Pas de créneau horaire (matériel / transport)</div>' : `
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
         <div class="form-group" style="margin:0"><label>Structure / Praticien</label><input data-soin-idx="${i}" data-soin-field="nom" value="${s.nom||''}" placeholder="Nom…" oninput="updateSoinByIdx(this)" style="font-size:0.8rem"></div>
         <div class="form-group" style="margin:0"><label>Jour(s)</label><input data-soin-idx="${i}" data-soin-field="jours" value="${s.jours||''}" placeholder="Lundi, Mercredi…" oninput="updateSoinByIdx(this)" style="font-size:0.8rem"></div>
@@ -8490,7 +8492,7 @@ function openEvenementModal(evtId=null) {
     const etab = store.etablissements.find(e=>e.id===c.etabId);
     return `<label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;color:var(--text2);padding:3px 0">
       <input type="checkbox" value="${c.id}" style="width:auto">
-      ${c.nom} <span style="color:var(--text3);font-size:0.75rem">${etab?'– '+etab.nom:''}</span>
+      ${c.nom} <span style="color:var(--text3);font-size:0.85rem">${etab?'– '+etab.nom:''}</span>
     </label>`;
   }).join('');
 
@@ -8549,13 +8551,13 @@ function buildEvtAeshList(classeIds, preselected=[], debutStr='', finStr='') {
     const otherLabel = isOther ? ' <span style="color:var(--text3);font-size:0.7rem">(autre étab.)</span>' : '';
     return `<label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:0.82rem;color:${isOther?'var(--text3)':'var(--text2)'};padding:5px 8px;background:var(--surface3);border-radius:var(--radius-sm)">
       <input type="checkbox" value="${a.id}" ${preselected.includes(a.id)?'checked':''} style="width:auto">
-      ${a.prenom} ${a.nom} <span style="color:var(--text3);font-size:0.73rem">${etabNom}</span>${absLabel}${otherLabel}
+      ${a.prenom} ${a.nom} <span style="color:var(--text3);font-size:0.82rem">${etabNom}</span>${absLabel}${otherLabel}
     </label>`;
   }
 
   let html = '';
   if(aeshEtab.length) {
-    html += `<div style="font-size:0.75rem;font-weight:600;color:var(--text2);margin-bottom:4px">AESH de l'établissement</div>`;
+    html += `<div style="font-size:0.85rem;font-weight:600;color:var(--text2);margin-bottom:4px">AESH de l'établissement</div>`;
     html += aeshEtab.map(a=>aeshRow(a,false)).join('');
   }
   if(aeshAutres.length) {
@@ -8663,8 +8665,8 @@ function renderEvenements() {
           <div style="font-size:0.82rem;color:var(--text2);margin-top:4px">📅 ${fmt(d1)} → ${fmt(d2)}</div>
           <div style="font-size:0.8rem;color:var(--text2);margin-top:3px">🏫 Classes : ${classes}</div>
           ${evt.reguliere?`<div style="font-size:0.8rem;color:var(--accent);margin-top:3px">🔁 ${['','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'][evt.reguliere.jour]||'?'} ${fmtTime(evt.reguliere.hDebut)}–${fmtTime(evt.reguliere.hFin)} · ${evt.reguliere.freq==='hebdo'?'chaque sem.':evt.reguliere.freq==='2semaines'?'1 sem./2':'1/mois'} · ${fmtDate(evt.reguliere.du)} → ${fmtDate(evt.reguliere.au)}</div>`:''}
-          ${evt.needsAesh?`<div style="font-size:0.8rem;color:var(--accent2);margin-top:3px">👤 AESH : ${aesh||'Non désigné(s)'}</div>`:'<div style="font-size:0.78rem;color:var(--text3);margin-top:3px">Sans accompagnement AESH</div>'}
-          ${evt.notes?`<div style="font-size:0.78rem;color:var(--text3);margin-top:4px;font-style:italic">${evt.notes}</div>`:''}
+          ${evt.needsAesh?`<div style="font-size:0.8rem;color:var(--accent2);margin-top:3px">👤 AESH : ${aesh||'Non désigné(s)'}</div>`:'<div style="font-size:0.85rem;color:var(--text3);margin-top:3px">Sans accompagnement AESH</div>'}
+          ${evt.notes?`<div style="font-size:0.85rem;color:var(--text3);margin-top:4px;font-style:italic">${evt.notes}</div>`:''}
         </div>
         <div style="display:flex;gap:6px;flex-shrink:0">
           <button class="btn btn-sm" onclick="openEvenementModal(${evt.id})">✏️</button>
@@ -8732,7 +8734,7 @@ document.addEventListener('DOMContentLoaded', async ()=>{
 });
 </script>
 
-<footer style="text-align:center;padding:14px 20px;font-size:0.75rem;color:var(--text3);border-top:1px solid var(--border);background:var(--surface);margin-top:auto" id="app-footer">
+<footer style="text-align:center;padding:14px 20px;font-size:0.85rem;color:var(--text3);border-top:1px solid var(--border);background:var(--surface);margin-top:auto" id="app-footer">
   <span id="footer-copyright"></span>
 </footer>
 </body>
